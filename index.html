@@ -1,0 +1,3423 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+  <!-- SEO & Social -->
+  <title>Nishant &amp; Banani · Wedding · December 2026</title>
+  <meta name="description" content="Nishant &amp; Banani are getting married on 10–11 December 2026 in Guwahati, Assam. You are warmly invited.">
+  <!-- Prevent phone number detection breaking layout -->
+  <meta name="format-detection" content="telephone=no">
+  <!-- iOS home screen / status bar -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Nishant &amp; Banani">
+  <!-- Android Chrome theme -->
+  <meta name="theme-color" content="#0a0604">
+  <!-- Preload critical font -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --white:        #ffffff;
+      --off-white:    #fafaf8;
+      --gold:         #C7A85E;
+      --gold-light:   #E7D4A2;
+      --gold-bright:  #E7D4A2;
+      --gold-pale:    #F0E6C8;
+      --gold-deep:    #A37B2E;
+      --gold-dark:    #6B4E1A;
+      --assam-red:    #9f2f2e;
+      --ink:          #0a0a0a;
+      --ink-soft:     #1a1a1a;
+      --muted:        #6b6560;
+      --muted-light:  #9a9590;
+      --accent-red:   #9f2f2e;
+      --border:       rgba(199,168,94,.2);
+      --border-soft:  rgba(0,0,0,.06);
+      --serif: "Playfair Display", Georgia, serif;
+      --sans:  "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+      --ease-out: cubic-bezier(.22,1.2,.36,1);
+      --ease-in:  cubic-bezier(.7,0,.84,0);
+      --spring:   cubic-bezier(.22,1.2,.36,1);
+      --nav-h: 64px;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      /* Dynamic viewport height — JS sets this to window.innerHeight * 0.01 (in px) */
+      --vh: 1vh;
+      /* Safe area insets for notch/Dynamic Island/gesture bar */
+      --sat: env(safe-area-inset-top, 0px);
+      --sar: env(safe-area-inset-right, 0px);
+      --sab: env(safe-area-inset-bottom, 0px);
+      --sal: env(safe-area-inset-left, 0px);
+    }
+    /* [COMPAT] Universal box-sizing, zero-reset */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* [SAFARI] scroll-behavior only on html, not body — prevents double-scroll on iOS */
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      /* [SAFARI] Prevent text inflation on rotation */
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      /* [PERF] Improve subpixel rendering */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--white);
+      color: var(--ink);
+      overflow-x: hidden;
+      /* [SAFARI] Remove duplicate scroll-behavior + deprecated momentum scroll */
+      /* [ANDROID] Prevent rubber-band overscroll from shifting layout */
+      overscroll-behavior-y: none;
+      /* [iOS] Prevent double-tap zoom on interactive elements */
+      touch-action: manipulation;
+    }
+
+    img { display: block; max-width: 100%; height: auto; }
+
+    /* [iOS] Prevent callout on long-press for non-interactive media */
+    img, video { -webkit-touch-callout: none; }
+
+    button, input, select, textarea { font: inherit; }
+
+    /* [A11Y] Consistent focus ring — gold themed */
+    :focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* [COMPAT] Firefox scrollbar */
+    * { scrollbar-width: thin; scrollbar-color: rgba(199,168,94,.3) transparent; }
+
+    /* [PERF] Contain paint for fixed elements */
+    #seal, #nav, #bottom-dock { contain: layout style; }
+
+    /* [PERF] Progress bar uses scaleX (GPU composited, no repaint) */
+    #progress {
+      position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 999;
+      transform-origin: left;
+      transform: scaleX(var(--p,0));
+      background: linear-gradient(90deg,var(--gold),var(--gold-bright),var(--gold));
+      transition: transform .1s linear;
+      /* [iOS] Force compositing layer */
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    #particles { position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+
+    /* ── SEAL ── */
+    /* [SAFARI] Seal uses fixed inset:0 — backface-visibility ensures no flicker on animation */
+    #seal {
+      position: fixed; inset: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: center;
+      background: #0a0604;
+      overflow: hidden;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    #seal.leaving {
+      animation: sealReveal 1.1s cubic-bezier(.4,0,.2,1) forwards;
+      pointer-events: none;
+    }
+    /* [SAFARI] -webkit- prefixed keyframes with identical bodies */
+    @-webkit-keyframes sealReveal {
+      0%   { -webkit-transform: scale(1);    opacity: 1; }
+      60%  { -webkit-transform: scale(1.06); opacity: .6; }
+      100% { -webkit-transform: scale(1.18); opacity: 0; }
+    }
+    @keyframes sealReveal {
+      0%   { transform: scale(1);    opacity: 1; }
+      60%  { transform: scale(1.06); opacity: .6; }
+      100% { transform: scale(1.18); opacity: 0; }
+    }
+
+    /* textured paper background */
+    .seal-paper {
+      position: absolute; inset: 0;
+      background: transparent;
+    }
+
+    /* blurred couple photo — CSS background for distortion-free rendering */
+    .seal-bg {
+      position: absolute; inset: 0; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .seal-bg img {
+      /* Portrait image: on mobile fill width, on desktop fill height — never distort */
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      /* Ensure it covers at least the full screen in one dimension */
+      min-height: 100%;
+      object-fit: contain;
+      filter: brightness(.78) saturate(.75);
+      transform: scale(1.04);
+      opacity: .82;
+      flex-shrink: 0;
+    }
+
+    /* Wide/landscape: scale by height so temple & couple fill the screen */
+    @media (min-aspect-ratio: 2/3) {
+      .seal-bg img {
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 20%;
+      }
+    }
+
+    /* gold vignette framing */
+    .seal-bg::after {
+      content: "";
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 65% at 50% 50%, transparent 15%, rgba(10,6,2,.45) 70%, rgba(10,6,2,.72) 100%);
+    }
+
+    /* inner content */
+    .seal-inner {
+      position: relative; z-index: 2;
+      display: flex; flex-direction: column;
+      align-items: center; text-align: center;
+      padding: 0 clamp(24px,6vw,80px);
+      max-width: 680px;
+    }
+
+    /* monogram */
+    .seal-mono {
+      width: clamp(96px,15vw,148px);
+      height: clamp(96px,15vw,148px);
+      position: relative;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 30px;
+      animation: monoFloat 5s ease-in-out infinite;
+    }
+    .seal-mono img {
+      width: 100%; height: 100%; object-fit: contain;
+      animation: monoGlow 3.5s ease-in-out infinite;
+    }
+    @-webkit-keyframes monoFloat {
+      0%,100% { -webkit-transform: translateY(0); transform: translateY(0); }
+      50%      { -webkit-transform: translateY(-9px); transform: translateY(-9px); }
+    }
+    @keyframes monoFloat {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(-9px); }
+    }
+    @-webkit-keyframes monoGlow {
+      0%,100% { -webkit-filter: drop-shadow(0 0 16px rgba(199,168,94,.35)); filter: drop-shadow(0 0 16px rgba(199,168,94,.35)); }
+      50%      { -webkit-filter: drop-shadow(0 0 38px rgba(199,168,94,.7)); filter: drop-shadow(0 0 38px rgba(199,168,94,.7)); }
+    }
+    @keyframes monoGlow {
+      0%,100% { filter: drop-shadow(0 0 16px rgba(199,168,94,.35)) drop-shadow(0 2px 6px rgba(199,168,94,.2)); }
+      50%      { filter: drop-shadow(0 0 38px rgba(199,168,94,.7))  drop-shadow(0 2px 14px rgba(199,168,94,.4)); }
+    }
+    .seal-ring {
+      position: absolute; inset: -18px; border-radius: 50%;
+      border: 1px solid rgba(199,168,94,.4);
+      animation: ringPulse 3.5s ease-in-out infinite;
+    }
+    .seal-ring::after {
+      content: ""; position: absolute; inset: 9px;
+      border-radius: 50%; border: 1px solid rgba(199,168,94,.18);
+    }
+    @keyframes ringPulse {
+      0%,100% { transform: scale(1);    opacity: .55; }
+      50%      { transform: scale(1.05); opacity: 1; }
+    }
+
+    /* eyebrow */
+    .seal-eyebrow {
+      font-size: clamp(.64rem,1.2vw,.78rem); font-weight: 500;
+      letter-spacing: .32em; text-transform: uppercase;
+      color: var(--gold); margin: 0 0 16px; opacity: 1;
+      text-shadow: 0 1px 8px rgba(0,0,0,.6);
+    }
+
+    /* names */
+    .seal-names {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 0; margin: 0 0 18px;
+    }
+    .sn-name {
+      font-family: var(--serif);
+      font-size: clamp(3rem,8.5vw,6.8rem);
+      font-weight: 400; line-height: .92; letter-spacing: -.025em;
+      background: linear-gradient(135deg, #A37B2E 0%, #C7A85E 35%, #E7D4A2 52%, #C7A85E 70%, #A37B2E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 0 24px rgba(0,0,0,.8)) drop-shadow(0 2px 12px rgba(199,168,94,.4));
+    }
+    .sn-amp {
+      font-family: var(--serif); font-style: italic;
+      font-size: clamp(1.8rem,5vw,4.5rem);
+      font-weight: 400; line-height: 1.1;
+      background: linear-gradient(135deg, #A37B2E 0%, #C7A85E 35%, #E7D4A2 52%, #C7A85E 70%, #A37B2E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: -2px 0;
+    }
+
+    /* date */
+    .seal-date {
+      color: rgba(255,255,255,.82); font-size: .7rem;
+      font-weight: 400; letter-spacing: .22em;
+      text-transform: uppercase; margin: 0 0 20px;
+      text-shadow: 0 1px 6px rgba(0,0,0,.5);
+    }
+
+    /* date pill */
+    .seal-date-pill {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 0 24px; height: 36px;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 999px;
+      background: rgba(255,255,255,.15); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      font-size: .68rem; font-weight: 500;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: #E7D4A2; margin: 0 0 18px;
+    }
+
+    /* thin gold rule */
+    .seal-rule {
+      width: 52px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 0 20px;
+    }
+
+    /* tagline */
+    .seal-tagline {
+      color: rgba(255,255,255,.78); font-size: clamp(.82rem,1.4vw,.96rem);
+      font-weight: 300; letter-spacing: .03em; line-height: 1.8;
+      max-width: 340px; margin: 0 0 26px;
+      text-shadow: 0 1px 8px rgba(0,0,0,.55);
+    }
+
+    /* countdown */
+    .seal-countdown {
+      display: flex; align-items: flex-start;
+      gap: clamp(12px,2.5vw,28px);
+      margin: 0 0 36px;
+    }
+    .countdown-unit {
+      display: flex; flex-direction: column; align-items: center; gap: 5px;
+    }
+    .countdown-num {
+      font-family: var(--serif);
+      font-size: clamp(1.9rem,4.5vw,3.2rem);
+      font-weight: 400; color: var(--gold);
+      line-height: 1; min-width: clamp(48px,7vw,76px);
+      text-align: center;
+      text-shadow: 0 2px 12px rgba(0,0,0,.7);
+    }
+    .countdown-label {
+      font-size: .58rem; font-weight: 500;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: rgba(255,255,255,.65);
+      text-shadow: 0 1px 4px rgba(0,0,0,.5);
+    }
+    .countdown-sep {
+      font-family: var(--serif);
+      font-size: clamp(1.9rem,4.5vw,3.2rem);
+      color: rgba(199,168,94,.3); line-height: 1;
+      padding-top: 1px;
+    }
+
+    /* lily + button wrapper */
+    .open-wrap {
+      position: relative;
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 9px;
+    }
+    /* outer gold border ring with gap */
+    .open-wrap::before {
+      content: "";
+      position: absolute; inset: 0;
+      border: 1.5px solid rgba(255,255,255,.25);
+      border-radius: 999px;
+      pointer-events: none;
+    }
+
+
+    /* open button */
+    .open-btn {
+      position: relative;
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 0 clamp(28px,5vw,48px);
+      height: clamp(44px,6.5vw,54px);
+      border: 1.5px solid rgba(255,255,255,.55);
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      color: #ffffff;
+      font-family: var(--sans);
+      font-size: clamp(.8rem,1.4vw,.94rem);
+      font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
+      cursor: pointer; overflow: hidden;
+      animation: btnBlink 2.4s ease-in-out infinite;
+      transition: transform .3s var(--spring), color .3s ease;
+    }
+    .open-btn::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      opacity: 0; transition: opacity .35s ease;
+    }
+    .open-btn span { position: relative; z-index: 1; }
+    @-webkit-keyframes btnBlink {
+      0%,100% { box-shadow: 0 0 0 rgba(199,168,94,0); border-color: rgba(199,168,94,.55); }
+      50%      { box-shadow: 0 0 14px rgba(199,168,94,.28); border-color: var(--gold); }
+    }
+    @keyframes btnBlink {
+      0%,100% { box-shadow: 0 0 0   rgba(199,168,94,0);    border-color: rgba(199,168,94,.55); }
+      50%      { box-shadow: 0 0 14px rgba(199,168,94,.28); border-color: var(--gold); }
+    }
+    .open-btn:hover {
+      color: var(--ink); transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(199,168,94,.18);
+      animation: none;
+    }
+    .open-btn:hover::before { opacity: 1; }
+
+        /* ── NAV ── */
+    /* [SAFARI] position:fixed nav — use translate3d for compositing, avoid double transform */
+    #nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h); z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,56px);
+      /* [COMPAT] Solid fallback for browsers without backdrop-filter */
+      background: rgba(255,255,255,0.92);
+      -webkit-backdrop-filter: saturate(180%) blur(0px);
+      backdrop-filter: saturate(180%) blur(0px);
+      border-bottom: 1px solid transparent;
+      /* hidden until 100px scroll */
+      opacity: 0;
+      /* [FIX] Single transform declaration — no conflict with translateZ */
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+      pointer-events: none;
+      /* [PERF] Promote to own layer for smooth transition */
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transition: opacity .5s cubic-bezier(.22,1.2,.36,1),
+                  transform .5s cubic-bezier(.22,1.2,.36,1),
+                  background .4s ease,
+                  -webkit-backdrop-filter .4s ease,
+                  backdrop-filter .4s ease,
+                  box-shadow .4s ease;
+    }
+    #nav.visible {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      pointer-events: auto;
+      background: rgba(255,255,255,.92);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(0,0,0,.04);
+    }
+    #nav.visible.scrolled { background: rgba(255,255,255,.96); box-shadow: 0 1px 12px rgba(0,0,0,.04); }
+    .nav-logo { height: 32px; width: auto; cursor: pointer; filter: none; }
+    .nav-links { display: flex; align-items: center; gap: clamp(24px,3.5vw,48px); list-style: none; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none;
+      font-size: .72rem; font-weight: 500;
+      letter-spacing: .14em; text-transform: uppercase;
+      transition: color .25s ease;
+    }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-rsvp {
+      display: inline-flex; align-items: center;
+      padding: 0 28px; height: 40px;
+      border: 1.5px solid var(--gold);
+      border-radius: 999px;
+      color: var(--gold);
+      font-size: .72rem; font-weight: 600;
+      letter-spacing: .18em; text-transform: uppercase;
+      text-decoration: none;
+      background: transparent;
+      transition: background .25s ease, color .25s ease;
+    }
+    .nav-rsvp:hover {
+      background: var(--gold);
+      color: var(--white);
+      box-shadow: 0 2px 10px rgba(199,168,94,.15);
+    }
+
+        /* ── SHARED ── */
+    section { position: relative; z-index: 2; }
+    .section-label { display: block; font-size: .72rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+    h2 { font-family: var(--serif); font-size: clamp(4.5rem,5vw,5.25rem); font-weight: 400; line-height: 1.05; letter-spacing: -.02em; }
+    /* [PERF] will-change only applied during animation via .animating class, removed after */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .85s var(--ease-out), transform .85s var(--ease-out); }
+    .reveal.animating { will-change: opacity, transform; }
+    .reveal.up { opacity: 1; transform: none; will-change: auto; }
+    .reveal.up { opacity: 1; transform: none; }
+
+    /* ── HERO ── */
+    /* [VIEWPORT] Full height fallback chain: dvh > svh > vh > --vh JS var
+       dvh = dynamic (shrinks with address bar), svh = small (always full address bar hidden),
+       vh = legacy — all needed for cross-browser coverage */
+    #hero {
+      min-height: 100vh; /* legacy fallback */
+      min-height: calc(var(--vh, 1vh) * 100); /* JS-set --vh=Xpx: exact mobile viewport */
+      min-height: 100svh; /* small viewport: consistent across address bar states */
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden; padding-top: var(--nav-h);
+      background: var(--off-white);
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-bg img {
+      width: 100%; height: 100%;
+      object-fit: contain; object-position: center center;
+      opacity: .22; filter: saturate(.7);
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 90% 75% at 50% 50%, rgba(250,250,248,.15) 0%, rgba(250,250,248,.72) 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      text-align: center;
+      padding: clamp(60px,10vw,100px) clamp(20px,5vw,60px);
+    }
+    .hero-ganesha {
+      width: clamp(48px,8vw,72px);
+      height: auto;
+      margin: 0 auto 20px;
+      display: block;
+      opacity: .88;
+      animation: monoFloat 6s ease-in-out infinite;
+      filter: drop-shadow(0 2px 10px rgba(199,168,94,.2));
+    }
+    .hero-eyebrow {
+      font-size: .7rem; font-weight: 500;
+      letter-spacing: .28em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 44px;
+    }
+    .hero-date-pill {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 0 28px; height: 40px;
+      border: 1px solid rgba(199,168,94,.45);
+      border-radius: 999px;
+      background: rgba(253,250,245,.7);
+      font-size: .72rem; font-weight: 500;
+      letter-spacing: .22em; text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 44px;
+    }
+    .hero-names {
+      font-family: var(--serif);
+      font-size: clamp(4rem,11vw,9.5rem);
+      font-weight: 400; line-height: .88;
+      letter-spacing: -.03em; color: var(--ink);
+      margin-bottom: 44px; /* [PERF] will-change removed — set dynamically by JS only when animating */
+      display: flex; align-items: baseline;
+      justify-content: center; gap: .22em;
+      flex-wrap: nowrap;
+    }
+    .hero-names em {
+      display: block; font-style: italic;
+      font-size: .24em; color: var(--gold);
+      font-family: var(--sans); font-weight: 400;
+      letter-spacing: .3em; text-transform: uppercase;
+      margin: 14px 0 10px;
+    }
+    .hero-subtext {
+      font-size: clamp(.86rem,1.5vw,1rem);
+      font-weight: 300; line-height: 1.85;
+      color: var(--muted); max-width: 520px;
+      margin: 0 auto 28px;
+    }
+    .hero-subtext strong { font-weight: 500; color: var(--ink-soft); }
+    .hero-dots {
+      color: var(--gold); letter-spacing: .3em;
+      font-size: 1rem; margin-top: 8px;
+    }
+    .scroll-cue {
+      position: absolute; bottom: 32px; left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      color: var(--muted-light);
+      font-size: .62rem; letter-spacing: .22em; text-transform: uppercase;
+      opacity: .6; animation: scrollBounce 2.4s ease-in-out infinite;
+    }
+    @keyframes scrollBounce {
+      0%,100% { transform: translateX(-50%) translateY(0); }
+      50%      { transform: translateX(-50%) translateY(7px); }
+    }
+
+    /* ── COUPLE — Editorial / Vogue ── */
+    #couple {
+      background: var(--off-white);
+      padding: 0;
+      overflow: hidden;
+    }
+    /* Full-bleed photo */
+    .couple-hero-photo {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .couple-hero-photo picture {
+      display: block;
+      width: 100%;
+    }
+    .couple-hero-photo picture,
+    .couple-hero-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+    /* Fade bottom of photo into off-white */
+    .couple-hero-photo::after {
+      content: '';
+      position: absolute; left: 0; right: 0; bottom: 0;
+      height: 30%;
+      background: linear-gradient(to bottom, transparent, var(--off-white));
+      pointer-events: none;
+    }
+    /* Subtle label overlaid top-left */
+    .couple-hero-label {
+      position: absolute; top: clamp(28px,4vw,48px); left: clamp(24px,5vw,60px);
+      z-index: 2;
+      font-size: .6rem; font-weight: 600;
+      letter-spacing: .32em; text-transform: uppercase;
+      color: rgba(255,255,255,.55);
+    }
+
+    /* Editorial body — narrow centred column */
+    .couple-editorial {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: clamp(72px,10vw,140px) clamp(28px,6vw,60px) clamp(100px,14vw,160px);
+      display: flex; flex-direction: column;
+      gap: 0;
+    }
+
+    /* Issue-label row */
+    .ce-issue {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: clamp(56px,8vw,96px);
+    }
+    .ce-issue-rule { flex: 1; height: 1px; background: rgba(199,168,94,.4); }
+    .ce-issue-text {
+      font-size: .58rem; font-weight: 600;
+      letter-spacing: .32em; text-transform: uppercase;
+      color: var(--gold); white-space: nowrap;
+    }
+
+    /* Story headline — big serif */
+    .ce-headline {
+      font-family: var(--serif);
+      font-size: clamp(4.5rem, 8.5vw, 7.5rem);
+      font-weight: 400; line-height: .92;
+      letter-spacing: -.04em;
+      color: var(--ink);
+      margin-bottom: clamp(40px,6vw,72px);
+    }
+    .ce-headline em {
+      font-style: italic;
+      background: linear-gradient(135deg, var(--gold-deep) 0%, var(--gold) 40%, var(--gold-light) 65%, var(--gold) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* Origin line */
+    .ce-origin {
+      font-family: var(--serif); font-style: italic;
+      font-size: clamp(.88rem,1.8vw,1.15rem);
+      color: var(--gold-deep); letter-spacing: .04em;
+      margin-bottom: clamp(32px,5vw,52px);
+      border-left: 2px solid rgba(199,168,94,.45);
+      padding-left: 18px;
+      line-height: 1.85;
+      max-width: 520px;
+    }
+
+    /* Story body copy */
+    .ce-story {
+      font-size: clamp(1rem,1.8vw,1.18rem);
+      font-weight: 300; line-height: 1.85;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: clamp(64px,9vw,108px);
+    }
+    .ce-story strong { font-weight: 500; color: var(--ink-soft); }
+
+    /* Parents divider */
+    .ce-parents-divider {
+      display: flex; align-items: center; gap: 16px;
+      margin-bottom: clamp(36px,5vw,56px);
+    }
+    .ce-parents-divider::before,
+    .ce-parents-divider::after {
+      content: ''; flex: 1; height: 1px;
+      background: rgba(0,0,0,.08);
+    }
+    .ce-parents-divider span {
+      font-size: .56rem; font-weight: 700;
+      letter-spacing: .3em; text-transform: uppercase;
+      color: var(--muted-light); white-space: nowrap;
+    }
+
+    /* Parents two columns */
+    .ce-parents {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(20px,4vw,48px);
+      margin-bottom: clamp(64px,9vw,108px);
+    }
+    .ce-parent-side { display: flex; flex-direction: column; gap: 6px; }
+    .ce-parent-name {
+      font-family: var(--serif);
+      font-size: clamp(1.3rem,2.8vw,2rem);
+      font-weight: 400; color: var(--ink); line-height: 1.05;
+    }
+    .ce-parent-label {
+      font-size: .7rem; font-weight: 300;
+      color: var(--muted); letter-spacing: .06em;
+    }
+    .ce-parent-parents {
+      font-size: .84rem; font-weight: 400;
+      color: var(--gold-deep); letter-spacing: .02em;
+      margin-top: 4px;
+    }
+    /* Gold hairline between the two sides */
+    .ce-parents::before {
+      content: '';
+      position: absolute;
+      /* won't work directly — handled via border on first child */
+    }
+    .ce-parent-side:first-child {
+      border-right: 1px solid rgba(199,168,94,.25);
+      padding-right: clamp(16px,3vw,32px);
+    }
+    .ce-parent-side:last-child {
+      padding-left: clamp(16px,3vw,32px);
+    }
+
+    /* Heritage line */
+    .ce-heritage {
+      display: flex; align-items: flex-start; gap: 16px;
+      margin-bottom: clamp(64px,9vw,108px);
+    }
+    .ce-heritage-dot {
+      flex-shrink: 0; width: 5px; height: 5px;
+      border-radius: 50%; background: var(--gold);
+      margin-top: 8px;
+    }
+    .ce-heritage-text {
+      font-family: var(--serif); font-style: italic;
+      font-size: clamp(.94rem,1.7vw,1.12rem);
+      line-height: 1.82; color: var(--muted);
+    }
+
+    /* Signature */
+    .ce-signature {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 12px;
+      text-align: center;
+    }
+    .ce-sig-names {
+      font-family: var(--serif); font-style: italic;
+      font-size: clamp(2.4rem,5.5vw,4.8rem);
+      font-weight: 400; color: var(--ink);
+      letter-spacing: -.02em; line-height: 1;
+    }
+    .ce-sig-names em {
+      color: var(--gold); font-style: italic;
+      font-size: .5em; font-family: var(--sans);
+      display: block; letter-spacing: .18em;
+      text-transform: uppercase; margin: 6px 0;
+    }
+    /* Handwritten underline SVG */
+    .ce-sig-underline {
+      width: clamp(120px,28vw,220px);
+      opacity: .55;
+    }
+    .ce-sig-underline path {
+      stroke: var(--gold);
+      stroke-dasharray: 300;
+      stroke-dashoffset: 300;
+      transition: stroke-dashoffset 1.4s cubic-bezier(.22,1,.36,1) .3s;
+    }
+    .ce-signature.up .ce-sig-underline path { stroke-dashoffset: 0; }
+    /* Tags */
+    .ce-tags {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+      margin-top: 28px;
+    }
+    .ce-tags span {
+      font-size: .58rem; font-weight: 600;
+      letter-spacing: .16em; text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(199,168,94,.35);
+      border-radius: 999px;
+      padding: 6px 16px;
+      background: rgba(199,168,94,.05);
+    }
+
+    @media (max-width: 640px) {
+      .ce-parents { grid-template-columns: 1fr; }
+      .ce-parent-side:first-child {
+        border-right: none;
+        border-bottom: 1px solid rgba(199,168,94,.25);
+        padding-right: 0;
+        padding-bottom: clamp(20px,4vw,32px);
+      }
+      .ce-parent-side:last-child {
+        padding-left: 0;
+        padding-top: clamp(20px,4vw,32px);
+      }
+    }
+
+    /* ── ITINERARY ── */
+    #events {
+      padding: clamp(120px,14vw,180px) clamp(24px,6vw,80px);
+      background: var(--white);
+    }
+    .events-header {
+      text-align: center;
+      max-width: 900px; margin: 0 auto clamp(80px,10vw,128px);
+    }
+    .events-label-row {
+      display: flex; align-items: center; justify-content: center;
+      gap: 16px; margin-bottom: 20px;
+    }
+    .events-rule {
+      flex: 0 0 clamp(32px,5vw,72px); height: 1px;
+      background: var(--gold); opacity: .6;
+    }
+    .events-label-text {
+      font-size: .68rem; font-weight: 600;
+      letter-spacing: .28em; text-transform: uppercase;
+      color: var(--gold);
+    }
+    .events-headline {
+      font-family: var(--serif);
+      font-size: clamp(4.5rem,9vw,9rem);
+      font-weight: 400; color: var(--ink);
+      line-height: .96; letter-spacing: -.04em;
+      margin-bottom: 28px;
+    }
+    .events-subdate {
+      font-size: clamp(.88rem,1.5vw,1.05rem);
+      font-weight: 300; color: var(--muted);
+      letter-spacing: .04em;
+    }
+    /* ── TIMELINE ── */
+    .tl-wrap {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 clamp(16px,3vw,24px);
+    }
+    /* Day separator */
+    .tl-day-label {
+      display: flex; align-items: center; gap: 20px;
+      margin-bottom: clamp(48px,7vw,80px);
+    }
+    .tl-day-label:not(:first-child) { margin-top: clamp(72px,10vw,120px); }
+    .tl-day-rule { flex: 1; height: 1px; background: var(--border); }
+    .tl-day-text {
+      font-size: .6rem; font-weight: 700;
+      letter-spacing: .28em; text-transform: uppercase;
+      color: var(--muted-light); white-space: nowrap;
+    }
+    .tl-day-venue {
+      font-size: .6rem; font-weight: 500;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--gold); white-space: nowrap;
+    }
+    /* Central spine — hidden, connectors carry the line */
+    .tl-spine { display: none; }
+    .tl-spine-fill { display: none; }
+    /* Each event row */
+    .tl-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 0 clamp(16px,3vw,28px);
+      margin-bottom: 0;
+      cursor: default;
+    }
+    .tl-item:last-child { margin-bottom: 0; }
+    /* Left column: node + connector */
+    .tl-node-col {
+      display: flex; flex-direction: column; align-items: center;
+      position: relative; z-index: 2;
+    }
+    .tl-node {
+      width: 52px; height: 52px; flex-shrink: 0;
+      border-radius: 50%;
+      border: 1.5px solid rgba(199,168,94,.35);
+      background: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      transition:
+        border-color .35s var(--spring),
+        background .35s var(--spring),
+        transform .45s var(--spring),
+        box-shadow .35s ease;
+      position: relative; z-index: 2;
+    }
+    .tl-node svg {
+      width: 24px; height: 24px;
+      opacity: .45;
+      transition: opacity .3s ease, transform .45s var(--spring);
+    }
+    .tl-item:hover .tl-node {
+      border-color: var(--gold);
+      background: rgba(199,168,94,.07);
+      transform: scale(1.12);
+      box-shadow: 0 0 0 6px rgba(199,168,94,.12), 0 4px 16px rgba(199,168,94,.18);
+    }
+    .tl-item:hover .tl-node svg {
+      opacity: 1;
+      transform: scale(1.05) rotate(-4deg);
+    }
+    /* connector line between nodes — stretches to match card height */
+    .tl-connector {
+      flex: 1; width: 1px; min-height: 48px;
+      background: rgba(199,168,94,.2);
+      margin: 0 auto;
+      transition: background .4s ease;
+      position: relative; overflow: hidden;
+    }
+    .tl-connector::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: var(--gold);
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform .55s var(--spring);
+    }
+    .tl-item:hover .tl-connector::after,
+    .tl-item:active .tl-connector::after,
+    .tl-item.tl-open .tl-connector::after { transform: scaleY(1); }
+    /* Right column: card — add bottom padding to space from next node */
+    .tl-content {
+      padding: 32px;
+      margin-bottom: clamp(20px,4vw,36px);
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,.07);
+      border-radius: 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.04);
+      transition: box-shadow .35s ease, transform .35s var(--spring);
+    }
+    .tl-item:last-child .tl-content { margin-bottom: 0; }
+    .tl-item:hover .tl-content,
+    .tl-item.tl-open .tl-content {
+      box-shadow: 0 8px 28px rgba(0,0,0,.07);
+      transform: translateX(2px);
+    }
+    .tl-time {
+      font-size: .62rem; font-weight: 700;
+      letter-spacing: .22em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 8px;
+    }
+    .tl-name {
+      font-family: var(--serif);
+      font-size: clamp(1.9rem,4vw,3.2rem);
+      font-weight: 400; color: var(--ink);
+      line-height: 1; letter-spacing: -.02em;
+      margin-bottom: 6px;
+      transition: transform .4s var(--spring), color .3s ease;
+    }
+    .tl-item:hover .tl-name {
+      transform: translateX(4px);
+      color: var(--gold-deep);
+    }
+    .tl-illus-label {
+      font-size: .6rem; font-weight: 600;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--muted-light);
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 12px;
+    }
+    .tl-illus-label::before {
+      content: '';
+      display: inline-block; width: 16px; height: 1px;
+      background: currentColor; opacity: .5;
+    }
+    .tl-location {
+      display: flex; align-items: center; gap: 5px;
+      font-size: .74rem; color: var(--assam-red);
+      font-weight: 500; margin-bottom: 14px;
+    }
+    .tl-location svg { flex-shrink: 0; opacity: .7; }
+    /* Description: collapsed by default, expands on hover */
+    .tl-desc {
+      font-size: .84rem; font-weight: 300;
+      line-height: 1.85; color: var(--muted);
+      max-height: 0; overflow: hidden;
+      opacity: 0;
+      max-width: 520px;
+      transition: max-height .5s var(--spring), opacity .4s ease;
+    }
+    .tl-item:hover .tl-desc,
+    .tl-item.tl-open .tl-desc {
+      max-height: 240px; opacity: 1;
+    }
+    /* Photo reveal on hover */
+    .tl-photo {
+      margin-top: 16px;
+      border-radius: 12px; overflow: hidden;
+      max-height: 0; opacity: 0;
+      transition: max-height .55s var(--spring), opacity .4s ease .1s;
+    }
+    .tl-photo img {
+      width: 100%; height: 180px; object-fit: cover;
+      display: block;
+      transition: transform .5s var(--spring);
+    }
+    .tl-item:hover .tl-photo,
+    .tl-item.tl-open .tl-photo {
+      max-height: 200px; opacity: 1;
+    }
+    .tl-item:hover .tl-photo img { transform: scale(1.04); }
+
+    /* [FIX] Removed stray semicolon causing CSS parse error */
+    .event-meta span::before { content: "✦ "; opacity: .5; font-size: .7em; }
+    .event-desc {
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      color: var(--muted); line-height: 1.65; font-size: .9rem; font-weight: 300;
+    }
+
+    /* ── MOMENTS / FILMSTRIP GALLERY ── */
+    #moments {
+      padding: clamp(120px,14vw,180px) 0 clamp(100px,14vw,160px);
+      background: #f7f3ee;
+      overflow: hidden;
+    }
+    .moments-header {
+      text-align: center;
+      padding: 0 clamp(20px,6vw,80px);
+      margin-bottom: clamp(64px,9vw,100px);
+    }
+    .moments-header .section-label {
+      font-size: .68rem; letter-spacing: .3em;
+      color: var(--gold); margin-bottom: 18px; font-weight: 500;
+    }
+    .moments-header h2 {
+      font-family: var(--serif);
+      font-size: clamp(4.5rem,7.5vw,7rem);
+      font-weight: 400; color: #1a1612; line-height: 1;
+      letter-spacing: -.035em;
+    }
+    .moments-sub {
+      font-size: .88rem; font-weight: 300;
+      color: #8c8078; margin-top: 12px; letter-spacing: .04em; font-style: italic;
+    }
+
+    /* Chapter header */
+    .chapter-label {
+      display: flex; align-items: center;
+      padding: 0 clamp(20px,5vw,60px);
+      margin-bottom: clamp(32px,4vw,48px); gap: 0;
+    }
+    .fs-chapter + .chapter-label { margin-top: clamp(72px,10vw,120px); }
+    .chapter-rule { flex: 1; height: 1px; background: rgba(199,168,94,.3); }
+    .chapter-identity {
+      display: flex; align-items: baseline; gap: 12px;
+      padding: 0 clamp(16px,3vw,32px); flex-shrink: 0;
+    }
+    .chapter-number {
+      font-family: var(--serif);
+      font-size: clamp(2rem,4.5vw,3.6rem);
+      font-weight: 400; line-height: 1;
+      color: rgba(199,168,94,.22); letter-spacing: -.02em;
+    }
+    .chapter-text { display: flex; flex-direction: column; gap: 2px; }
+    .chapter-title {
+      font-family: var(--serif);
+      font-size: clamp(1rem,2vw,1.5rem);
+      font-weight: 400; color: #1a1612; line-height: 1.1;
+    }
+    .chapter-subtitle {
+      font-size: .62rem; color: #8c8078;
+      letter-spacing: .18em; text-transform: uppercase; font-weight: 500;
+    }
+
+    /* Filmstrip scroll container */
+    .fs-chapter {
+      position: relative;
+      overflow: hidden;
+      border-block: 1px solid rgba(199,168,94,.18);
+      padding-block: 28px;
+    }
+    .fs-chapter::before,
+    .fs-chapter::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: clamp(40px, 8vw, 100px);
+      z-index: 2;
+      pointer-events: none;
+    }
+    .fs-chapter::before {
+      left: 0;
+      background: linear-gradient(to right, var(--off-white) 10%, transparent);
+    }
+    .fs-chapter::after {
+      right: 0;
+      background: linear-gradient(to left, var(--off-white) 10%, transparent);
+    }
+    .fs-track {
+      display: flex;
+      width: max-content;
+      gap: clamp(12px,1.8vw,20px);
+      animation: fsScroll 48s linear infinite;
+      -webkit-animation: fsScroll 48s linear infinite;
+      will-change: transform;
+    }
+    .fs-chapter:hover .fs-track,
+    .fs-chapter.paused .fs-track { animation-play-state: paused; }
+    @-webkit-keyframes fsScroll {
+    }
+    @keyframes fsScroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(calc(-50% - clamp(6px,.9vw,10px))); }
+    }
+
+    /* Individual card */
+    .fs-card {
+      flex-shrink: 0;
+      width: clamp(180px,22vw,280px);
+    }
+    .fs-card-img {
+      width: 100%;
+      height: clamp(260px,34vw,400px);
+      border-radius: clamp(12px,1.5vw,20px);
+      overflow: hidden;
+      border: 1px solid rgba(199,168,94,.2);
+      box-shadow: 0 14px 38px rgba(74,50,11,.10);
+      transform: translateY(var(--lift, 0)) rotate(var(--tilt, 0deg));
+      animation: fsFloat 7s ease-in-out infinite;
+      animation-delay: calc(var(--beat, 0) * -.6s);
+    }
+    .fs-card:nth-child(3n)   .fs-card-img { --lift: 12px;  --tilt: -1deg;  --beat: 1; }
+    .fs-card:nth-child(4n)   .fs-card-img { --lift: -8px;  --tilt: .9deg;  --beat: 2; }
+    .fs-card:nth-child(5n)   .fs-card-img { --tilt: .6deg; --beat: 3; }
+    @-webkit-keyframes fsFloat {
+      0%, 100% { -webkit-transform: translateY(0); transform: translateY(0); }
+      50%       { -webkit-transform: translateY(-7px); transform: translateY(-7px); }
+    }
+    @keyframes fsFloat {
+      0%, 100% { -webkit-transform: translateY(0); transform: translateY(0); }
+      50%       { -webkit-transform: translateY(-7px); transform: translateY(-7px); }
+    }
+    .fs-card-img img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center 20%;
+      display: block;
+      transition: transform .7s ease, filter .5s ease;
+      filter: saturate(.85) brightness(.96);
+    }
+    .fs-card-img:hover img,
+    .fs-card-img:active img {
+      transform: scale(1.06);
+      filter: saturate(1) brightness(1);
+    }
+
+    @media (max-width: 600px) {
+      .fs-card { width: clamp(150px,46vw,210px); }
+      .fs-card-img { height: clamp(220px,62vw,300px); }
+      .fs-track { animation-duration: 36s; -webkit-animation-duration: 36s; }
+      /* Disable card float bounce on mobile to reduce GPU load */
+      .fs-card-img { animation: none !important; transform: none !important; }
+    }
+
+        /* ── RSVP ── */
+    @-webkit-keyframes spinRing {
+    }
+    @keyframes spinRing { to { transform: rotate(360deg); } }
+    @-webkit-keyframes fieldSlideIn {
+    }
+    /* [PERF] fieldSlideIn: filter removed, GPU-safe opacity+transform only */
+    @-webkit-keyframes fieldSlideIn {
+      from { opacity: 0; -webkit-transform: translateY(18px); transform: translateY(18px); }
+      to   { opacity: 1; -webkit-transform: none; transform: none; }
+    }
+    @keyframes fieldSlideIn {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: none; }
+    }
+    @keyframes checkPop {
+      0%   { transform: scale(0); opacity: 0; }
+      60%  { transform: scale(1.25); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    #rsvp {
+      padding: clamp(120px,14vw,180px) clamp(24px,6vw,80px);
+      background: var(--ink);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px,7vw,88px);
+      align-items: center;
+    }
+
+    /* LEFT */
+    .rsvp-left { color: var(--white); }
+    .rsvp-left .section-label { color: rgba(255,255,255,.4); margin-bottom: 20px; font-size: .68rem; letter-spacing: .28em; display: block; }
+    .rsvp-left h2 {
+      font-family: var(--serif);
+      font-size: clamp(4.5rem,6.5vw,6.5rem);
+      font-weight: 400; color: var(--white);
+      line-height: .98; letter-spacing: -.035em;
+      margin-bottom: 28px;
+    }
+    .rsvp-copy {
+      font-size: clamp(.9rem,1.5vw,1rem);
+      font-weight: 300; line-height: 1.85;
+      color: rgba(255,255,255,.48);
+      max-width: 520px;
+      margin-bottom: 36px;
+    }
+    .rsvp-details { display: flex; flex-direction: column; gap: 20px; }
+    .rsvp-detail-row { display: flex; align-items: flex-start; gap: 14px; }
+    .rsvp-detail-dot {
+      flex-shrink: 0;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      margin-top: 7px;
+      opacity: .7;
+    }
+    .rsvp-detail-label {
+      font-size: .64rem; font-weight: 600;
+      letter-spacing: .16em; text-transform: uppercase;
+      color: rgba(255,255,255,.32); margin-bottom: 3px;
+    }
+    .rsvp-detail-val {
+      font-size: .9rem; font-weight: 300;
+      color: rgba(255,255,255,.62); line-height: 1.5;
+    }
+
+    /* [COMPAT] RIGHT glass card: solid fallback for browsers without backdrop-filter */
+    .rsvp-right {
+      position: relative;
+      background: rgba(30,20,8,.85); /* solid fallback */
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 24px;
+      padding: clamp(28px,4vw,44px);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0,0,0,.12), 0 1px 0 rgba(255,255,255,.05) inset;
+    }
+    @supports ((-webkit-backdrop-filter: blur(12px)) or (backdrop-filter: blur(12px))) {
+      .rsvp-right { background: rgba(255,255,255,.045); }
+    }
+
+    /* Sequential fields */
+    .rsvp-form { display: flex; flex-direction: column; gap: 0; }
+    /* [PERF] Removed filter:blur animation — triggers repaint on every frame.
+       Using opacity + transform only (GPU composited, zero repaint) */
+    .rsvp-field {
+      display: flex; flex-direction: column; gap: 7px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      opacity: 0;
+      transform: translateY(16px);
+      transition:
+        opacity .5s cubic-bezier(.22,1.2,.36,1),
+        transform .5s cubic-bezier(.22,1.2,.36,1);
+    }
+    .rsvp-field:last-of-type { border-bottom: none; }
+    .rsvp-field.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .rsvp-field label {
+      font-size: .64rem; font-weight: 600;
+      letter-spacing: .16em; text-transform: uppercase;
+      color: rgba(255,255,255,.38);
+    }
+    .rsvp-field input,
+    .rsvp-field select,
+    .rsvp-field textarea {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(255,255,255,.15);
+      border-radius: 0;
+      padding: 10px 0;
+      color: var(--white);
+      font-size: 1rem; font-weight: 300;
+      font-family: var(--sans);
+      transition: border-color .25s;
+      -moz-appearance: none; -webkit-appearance: none; appearance: none;
+      outline: none;
+    }
+    .rsvp-field input::placeholder,
+    .rsvp-field textarea::placeholder { color: rgba(255,255,255,.2); }
+    .rsvp-field input:focus,
+    .rsvp-field select:focus,
+    .rsvp-field textarea:focus { border-color: var(--gold-light); }
+    .rsvp-field select option { background: #1a1208; color: var(--white); }
+    .rsvp-field textarea { resize: none; line-height: 1.7; min-height: 72px; }
+
+    /* Submit button states */
+    .submit-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%; height: 56px; border-radius: 999px;
+      border: 1.5px solid var(--gold);
+      background: transparent;
+      color: var(--gold);
+      font-family: var(--sans);
+      font-size: .88rem; font-weight: 600;
+      letter-spacing: .22em; text-transform: uppercase;
+      cursor: pointer; margin-top: 20px;
+      transition: background .25s ease, color .25s ease, transform .25s cubic-bezier(.22,1.2,.36,1), border-color .25s;
+      position: relative; overflow: hidden;
+    }
+    .submit-btn:hover { background: rgba(199,168,94,.12); }
+    .submit-btn.loading {
+      color: rgba(199,168,94,.4);
+      border-color: rgba(199,168,94,.3);
+      pointer-events: none;
+    }
+    .submit-btn.success {
+      border-color: var(--gold);
+      color: var(--gold);
+      pointer-events: none;
+    }
+    #submitRing { flex-shrink: 0; }
+    #submitCheck { flex-shrink: 0; animation: checkPop .35s cubic-bezier(.22,1.2,.36,1) forwards; }
+    #formMsg {
+      font-size: .8rem; color: rgba(255,255,255,.45);
+      text-align: center; min-height: 0;
+      transition: all .3s;
+      margin-top: 4px;
+    }
+    #formMsg.error { color: #e07070; }
+
+    /* ── RSVP SUCCESS PANEL ── */
+    #rsvpSuccess {
+      display: none;
+      position: absolute; inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(145deg, #0f0a05 0%, #1a1208 60%, #0f0a05 100%);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: clamp(32px,6vw,64px);
+      z-index: 10;
+      animation: successFadeIn .6s cubic-bezier(.22,1.2,.36,1) forwards;
+    }
+    #rsvpSuccess.visible { display: flex; }
+    @keyframes successFadeIn {
+      from { opacity: 0; transform: scale(.96); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    .success-ganesha {
+      width: 56px; height: 56px;
+      opacity: .7;
+      margin-bottom: 28px;
+      animation: monoFloat 4s ease-in-out infinite;
+    }
+    .success-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem,5vw,3.2rem);
+      font-weight: 400;
+      background: linear-gradient(135deg, #A37B2E 0%, #C7A85E 40%, #E7D4A2 60%, #C7A85E 80%, #A37B2E 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .success-sub {
+      font-size: clamp(.88rem,1.8vw,1rem);
+      font-weight: 300;
+      color: rgba(255,255,255,.55);
+      line-height: 1.75;
+      max-width: 320px;
+      margin-bottom: 32px;
+    }
+    .success-divider {
+      width: 48px; height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      margin: 0 auto 32px;
+    }
+    .success-hashtag {
+      font-size: .6rem; font-weight: 600;
+      letter-spacing: .22em; text-transform: uppercase;
+      color: var(--gold); opacity: .6;
+      margin-bottom: 32px;
+    }
+    .success-back-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 28px;
+      border: 1px solid rgba(199,168,94,.4);
+      border-radius: 999px;
+      background: transparent;
+      color: rgba(255,255,255,.6);
+      font-family: var(--sans);
+      font-size: .68rem; font-weight: 500;
+      letter-spacing: .16em; text-transform: uppercase;
+      cursor: pointer;
+      transition: border-color .25s, color .25s, background .25s;
+      text-decoration: none;
+    }
+    .success-back-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(199,168,94,.07);
+    }
+
+/* ── FOOTER ── */
+    /* ── FOOTER: FADE INTO BLACK ── */
+    footer {
+      position: relative;
+      background: var(--ink);
+      overflow: hidden;
+      padding: 0;
+    }
+    /* gradient fade from page bg to black */
+    footer::before {
+      content: "";
+      display: block;
+      height: clamp(80px, 14vw, 160px);
+      background: linear-gradient(to bottom, var(--off-white), #0a0604);
+      pointer-events: none;
+    }
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: clamp(80px,12vw,140px) clamp(24px,6vw,80px) clamp(96px,14vw,140px);
+      gap: clamp(36px,6vw,60px);
+    }
+
+    /* quote block */
+    .footer-quote {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .footer-line1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem,4.5vw,5rem);
+      font-weight: 400;
+      color: rgba(255,255,255,.45);
+      letter-spacing: -.02em;
+      line-height: 1.15;
+      margin: 0;
+    }
+    .footer-line2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem,4.5vw,5rem);
+      font-weight: 400;
+      color: rgba(255,255,255,.45);
+      letter-spacing: -.02em;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    /* thank you block */
+    .footer-thanks { display: flex; flex-direction: column; gap: 8px; }
+    .footer-thankyou {
+      font-family: var(--serif);
+      font-size: clamp(3.5rem,9vw,9rem);
+      font-weight: 400;
+      background: linear-gradient(135deg, #A37B2E 0%, #C7A85E 40%, #E7D4A2 55%, #C7A85E 75%, #A37B2E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      letter-spacing: -.02em;
+      margin: 0;
+    }
+    .footer-sub {
+      font-size: clamp(1rem,2vw,1.3rem);
+      font-weight: 300;
+      color: rgba(255,255,255,.5);
+      letter-spacing: .04em;
+      line-height: 1.85;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* monogram block */
+    .footer-monogram { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+    .footer-logo { height: 48px; width: auto; opacity: .7; filter: brightness(1.1); }
+    .footer-names {
+      font-family: var(--serif);
+      font-size: clamp(1.2rem,2.5vw,1.8rem);
+      font-weight: 400; color: rgba(255,255,255,.35);
+    }
+    .footer-names em {
+      display: inline; font-style: italic;
+      color: rgba(199,168,94,.5);
+      font-size: .85em;
+    }
+    .footer-date {
+      font-size: .72rem; font-weight: 400;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: rgba(255,255,255,.2);
+    }
+    @keyframes beatPulse { 0%,100% { transform: scale(1); } 14% { transform: scale(1.3); } 28% { transform: scale(1); } 42% { transform: scale(1.2); } }
+    .beat { display: inline-block; animation: beatPulse 2.4s ease infinite; }
+
+    /* ─── MOBILE & TABLET ─── */
+    @media (max-width: 900px) {
+      .tl-name { font-size: clamp(1.6rem,6vw,2.4rem); }
+    }
+
+    @media (max-width: 768px) {
+      /* nav */
+      .nav-links { display: none; }
+
+      /* hero */
+      .hn-name { font-size: clamp(3rem,14vw,5.5rem); }
+      .hn-amp { font-size: clamp(2.2rem,10vw,4rem); }
+      #hero { padding-top: calc(var(--nav-h) + 24px); }
+
+      /* couple — editorial, single column already, just padding */
+      .couple-editorial { padding-left: 32px; padding-right: 32px; }
+
+      /* itinerary → timeline */
+      .tl-wrap { padding: 0 16px; }
+      .tl-spine, .tl-spine-fill { left: calc(16px + 26px); }
+      .tl-item { grid-template-columns: 44px 1fr; gap: 0 12px; }
+      .tl-node { width: 44px; height: 44px; }
+      .tl-node svg { width: 20px; height: 20px; }
+      .tl-name { font-size: clamp(1.5rem,6vw,2.2rem); }
+
+      /* events section padding */
+      #events { padding-left: 32px; padding-right: 32px; }
+      .events-header { padding: 0; }
+      .tl-day-label { padding: 0; }
+
+      /* rsvp */
+      #rsvp { grid-template-columns: 1fr; }
+      .rsvp-info { display: none; }
+      .form-row { grid-template-columns: 1fr; }
+
+      /* moments / glimpses */
+      .chapter-title { font-size: clamp(.95rem,3.5vw,1.3rem); }
+      .chapter-label { padding: 0 32px; }
+      .moments-header { padding: 0 32px; }
+    }
+
+    @media (max-width: 480px) {
+      /* hero names */
+      .hn-name { font-size: clamp(2.4rem,13vw,4rem); letter-spacing: -.01em; }
+      .hn-amp { font-size: clamp(1.8rem,9vw,3rem); }
+      .hero-subtext { font-size: .78rem; }
+
+      /* seal names */
+      .sn-name { font-size: clamp(2rem,11vw,3.5rem); }
+      .sn-amp { font-size: clamp(1.6rem,8vw,2.8rem); }
+      .seal-countdown { gap: 12px; }
+      .seal-cd-val { font-size: clamp(1.6rem,7vw,2.2rem); }
+
+      /* timeline */
+      .tl-item { gap: 0 12px; margin-bottom: 32px; }
+      .tl-node { width: 40px; height: 40px; }
+      .tl-node svg { width: 18px; height: 18px; }
+      .tl-name { font-size: clamp(1.3rem,7vw,1.9rem); }
+      .tl-desc { font-size: .82rem; }
+
+      /* events header */
+      .events-headline { font-size: clamp(3rem,10vw,4.5rem); }
+      .events-label-text { font-size: .58rem; }
+
+      /* couple editorial mobile */
+      .ce-sig-names { font-size: clamp(1.8rem,9vw,3rem); }
+
+      /* form */
+      .rsvp-field input, .rsvp-field select, .rsvp-field textarea {
+        font-size: 16px !important; /* prevent iOS zoom */
+      }
+      .rsvp-right { border-radius: 24px !important; padding: 36px 28px !important; margin: 0 24px !important; }
+    }
+
+    /* smooth scroll & touch */
+    @media (hover: none) and (pointer: coarse) {
+      html { scroll-behavior: smooth; }
+      /* On touch, tap toggles tl-open instead of hover */
+      .tl-item:hover .tl-node { transform: none; box-shadow: none; }
+      .tl-item.tl-open .tl-node {
+        border-color: var(--gold);
+        background: rgba(199,168,94,.07);
+        box-shadow: 0 0 0 5px rgba(199,168,94,.12);
+      }
+      canvas { pointer-events: none; }
+    }
+  
+    /* ── CSS GPU PARTICLES ── */
+    #particles span {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(199,168,94, var(--a, .55));
+      width:  var(--s, 3px);
+      height: var(--s, 3px);
+      top:  var(--y);
+      left: var(--x);
+      animation: particleDrift var(--d, 8s) var(--delay, 0s) ease-in-out infinite alternate;
+    }
+    @-webkit-keyframes particleDrift {
+    }
+    @keyframes particleDrift {
+      0%   { transform: translate(0, 0) scale(1);   opacity: var(--a, .55); }
+      33%  { transform: translate(var(--tx1), var(--ty1)) scale(1.4); opacity: calc(var(--a, .55) * 1.6); }
+      66%  { transform: translate(var(--tx2), var(--ty2)) scale(.8); opacity: calc(var(--a, .55) * .5); }
+      100% { transform: translate(var(--tx3), var(--ty3)) scale(1.2); opacity: var(--a, .55); }
+    }
+  
+    /* ── BOTTOM FLOATING DOCK (mobile) ── */
+    #bottom-dock {
+      display: none; /* hidden on desktop */
+    }
+    @media (max-width: 768px) {
+      /* show dock, hide top nav links */
+      .nav-links { display: none !important; }
+      .nav-rsvp  { display: none !important; }
+      #nav { justify-content: center; }
+
+      /* [SAFARI] Fixed dock: translate3d for compositing, safe-area for gesture bar/home indicator */
+      #bottom-dock {
+        display: flex;
+        position: fixed;
+        /* [SAFE-AREA] Dynamic Island / home indicator clearance */
+        bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+        left: 50%;
+        /* [FIX] translate3d triggers compositing without translateZ conflict */
+        -webkit-transform: translate3d(-50%, 0, 0);
+        transform: translate3d(-50%, 0, 0);
+        z-index: 500;
+        /* [COMPAT] Solid fallback for browsers without backdrop-filter */
+        background: rgba(15,10,5,.92);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(199,168,94,.25);
+        border-radius: 999px;
+        padding: 10px 8px;
+        gap: 0;
+        box-shadow: 0 4px 20px rgba(0,0,0,.18), 0 1px 0 rgba(199,168,94,.1) inset;
+        min-width: min(360px, calc(100vw - 40px));
+        justify-content: space-around;
+        /* [PERF] Promote fixed element to own layer */
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        /* [SAFARI] Ensure proper stacking above scrolling content */
+        isolation: isolate;
+      }
+      .dock-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        color: rgba(255,255,255,.55);
+        text-decoration: none;
+        font-size: .55rem;
+        font-weight: 500;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        transition: color .2s, background .2s;
+        -webkit-tap-highlight-color: transparent;
+        min-width: 0;
+        flex: 1;
+        white-space: nowrap;
+      }
+      .dock-item svg {
+        transition: stroke .2s, transform .2s cubic-bezier(.22,1.2,.36,1);
+      }
+      .dock-item.active,
+      .dock-item:active {
+        color: var(--gold);
+        background: rgba(199,168,94,.12);
+      }
+      .dock-item.active svg,
+      .dock-item:active svg {
+        stroke: var(--gold);
+        transform: translateY(-2px) scale(1.1);
+      }
+
+      /* ── iOS TIMELINE STYLE ── */
+      .tl-wrap { padding: 0 16px; }
+      .tl-spine, .tl-spine-fill { left: calc(16px + 26px); }
+      .tl-item { grid-template-columns: 44px 1fr; gap: 0 12px; margin-bottom: 0; }
+      .tl-content { padding: 28px 24px; margin-bottom: clamp(16px,3vw,28px); }
+      .tl-node { width: 44px; height: 44px; }
+      .tl-node svg { width: 20px; height: 20px; }
+      /* On touch: tap open instead of hover */
+      .tl-item.tl-open .tl-desc { max-height: 300px; opacity: 1; }
+      .tl-item.tl-open .tl-photo { max-height: 200px; opacity: 1; }
+      .tl-item.tl-open .tl-name { transform: translateX(4px); color: var(--gold-deep); }
+      .tl-item.tl-open .tl-connector::after { transform: scaleY(1); }
+      .tl-item.tl-open .tl-node {
+        border-color: var(--gold);
+        background: rgba(199,168,94,.07);
+        box-shadow: 0 0 0 5px rgba(199,168,94,.12);
+      }
+
+      /* ── BIGGER TAP TARGETS ── */
+      .open-btn {
+        height: 64px !important;
+        padding: 0 clamp(32px,8vw,56px) !important;
+        font-size: 1rem !important;
+      }
+      .submit-btn {
+        height: 64px !important;
+        font-size: 1rem !important;
+        border-radius: 16px !important;
+      }
+
+      /* ── REMOVE TINY TEXT — upgrade to 14-16px ── */
+      .tl-time {
+        font-size: .82rem !important;
+        letter-spacing: .08em !important;
+      }
+      .tl-location {
+        font-size: .88rem !important;
+      }
+      .tl-desc {
+        font-size: .9rem !important;
+        line-height: 1.75 !important;
+      }
+      .tl-name {
+        font-size: clamp(1.6rem,7vw,2.4rem) !important;
+      }
+      .ce-story {
+        font-size: 1rem !important;
+      }
+      .ce-origin {
+        font-size: .9rem !important;
+      }
+      .hero-subtext {
+        font-size: .88rem !important;
+        line-height: 1.7 !important;
+      }
+      .events-label-text {
+        font-size: .72rem !important;
+      }
+      .events-subdate {
+        font-size: .95rem !important;
+      }
+
+      /* ── HERO NAMES — vertical stack, centered ── */
+      #heroNames {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 28px !important;
+        line-height: 1 !important;
+      }
+      .hn-name {
+        font-size: clamp(3.2rem,15vw,5.5rem) !important;
+        display: block !important;
+        line-height: .92 !important;
+      }
+      .hn-amp {
+        font-size: clamp(2rem,9vw,3.5rem) !important;
+        display: block !important;
+        line-height: 1.1 !important;
+        margin: 0 !important;
+      }
+
+      /* ── SECTION PADDING ── */
+      #events   { padding-left: 0; padding-right: 0; }
+      #couple   { padding-left: 0; padding-right: 0; }
+      #rsvp     { padding-left: 0; padding-right: 0; }
+
+      /* ── RSVP FORM CARD ── */
+      .rsvp-form-card {
+        border-radius: 24px !important;
+        padding: 36px 28px !important;
+        margin: 0 24px !important;
+      }
+      .form-field input,
+      .form-field select,
+      .form-field textarea {
+        font-size: 16px !important;
+        height: 52px;
+        border-radius: 12px !important;
+      }
+      .form-field textarea { height: auto !important; }
+
+      /* bottom dock safe area */
+      /* [SAFE-AREA] Padding accounts for home indicator + dock height */
+      body { padding-bottom: calc(110px + env(safe-area-inset-bottom, 0px)); }
+    }
+
+    @media (max-width: 480px) {
+      .tl-item { gap: 0 12px; margin-bottom: 0; }
+      .tl-content { padding: 24px 20px; border-radius: 20px; margin-bottom: 16px; }
+      .dock-item { padding: 8px 10px; }
+    }
+  
+    /* ── HERO SEQUENCE ANIMATION ── */
+    .hero-seq {
+      opacity: 0;
+      will-change: opacity, transform, filter;
+    }
+    /* Ganesha + date pill: blur + scale in */
+    .hero-ganesha.hero-seq,
+    .hero-date-pill.hero-seq {
+      transform: scale(.94);
+      filter: blur(6px);
+      transition:
+        opacity  .8s cubic-bezier(.22,1.2,.36,1),
+        transform .8s cubic-bezier(.22,1.2,.36,1),
+        filter   .8s cubic-bezier(.22,1.2,.36,1);
+    }
+    /* Names: slide up with spring */
+    .hn-name.hero-seq,
+    .hn-amp.hero-seq {
+      transform: translateY(28px);
+      filter: blur(4px);
+      transition:
+        opacity  .75s cubic-bezier(.22,1.2,.36,1),
+        transform .75s cubic-bezier(.22,1.2,.36,1),
+        filter   .75s cubic-bezier(.22,1.2,.36,1);
+    }
+    /* Tagline + dots: subtle fade up */
+    .hero-subtext.hero-seq,
+    .hero-dots.hero-seq {
+      transform: translateY(16px);
+      transition:
+        opacity  .65s cubic-bezier(.22,1.2,.36,1),
+        transform .65s cubic-bezier(.22,1.2,.36,1);
+    }
+    .hero-seq.visible {
+      opacity: 1;
+      transform: none;
+      filter: none;
+    }
+  
+    /* ── SEAL SEQUENCE ANIMATION ── */
+    .seal-s {
+      opacity: 0;
+      will-change: opacity, transform, filter;
+    }
+    /* eyebrow: fade in */
+    .seal-eyebrow.seal-s {
+      transform: translateY(10px);
+      transition: opacity .7s cubic-bezier(.22,1.2,.36,1), transform .7s cubic-bezier(.22,1.2,.36,1);
+    }
+    /* monogram: scale + blur in */
+    .seal-mono.seal-s {
+      transform: scale(.88);
+      filter: blur(8px);
+      transition: opacity .9s cubic-bezier(.22,1.2,.36,1), transform .9s cubic-bezier(.22,1.2,.36,1), filter .9s cubic-bezier(.22,1.2,.36,1);
+    }
+    /* names: spring slide */
+    .sn-name.seal-s, .sn-amp.seal-s {
+      transform: translateY(22px);
+      filter: blur(4px);
+      transition: opacity .75s cubic-bezier(.22,1.2,.36,1), transform .75s cubic-bezier(.22,1.2,.36,1), filter .75s cubic-bezier(.22,1.2,.36,1);
+    }
+    /* date pill, tagline, countdown, button: gentle fade up */
+    .seal-date-pill.seal-s,
+    .seal-tagline.seal-s,
+    .seal-countdown.seal-s,
+    .open-wrap.seal-s {
+      transform: translateY(14px);
+      transition: opacity .65s cubic-bezier(.22,1.2,.36,1), transform .65s cubic-bezier(.22,1.2,.36,1);
+    }
+    .seal-s.in {
+      opacity: 1;
+      transform: none;
+      filter: none;
+    }
+
+    /* Eyebrow label update: "A Wedding Invitation" styling */
+    .seal-eyebrow {
+      font-size: clamp(.6rem,1.1vw,.72rem);
+      font-weight: 500;
+      letter-spacing: .38em;
+      text-transform: uppercase;
+      color: rgba(231,212,162,.7);
+      margin: 0 0 28px;
+      text-shadow: 0 1px 8px rgba(0,0,0,.5);
+    }
+
+    /* Press to Open — hold/long-press feel */
+    .open-btn {
+      position: relative;
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 0 clamp(32px,5vw,52px);
+      height: clamp(48px,7vw,60px);
+      border: 1.5px solid rgba(255,255,255,.4);
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      color: rgba(255,255,255,.9);
+      font-family: var(--sans);
+      font-size: clamp(.78rem,1.4vw,.9rem);
+      font-weight: 500;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      cursor: pointer;
+      overflow: hidden;
+      transition: transform .3s cubic-bezier(.22,1.2,.36,1), background .3s, border-color .3s;
+    }
+    /* Soft pulse ring around button */
+    @keyframes pressRing {
+      0%   { transform: scale(1);    opacity: .5; }
+      70%  { transform: scale(1.55); opacity: 0;  }
+      100% { transform: scale(1.55); opacity: 0;  }
+    }
+    .open-wrap::before {
+      content: "";
+      position: absolute; inset: -4px;
+      border-radius: 999px;
+      border: 1px solid rgba(199,168,94,.4);
+      animation: pressRing 2.2s ease-out infinite;
+      pointer-events: none;
+    }
+    .open-wrap::after {
+      content: "";
+      position: absolute; inset: -14px;
+      border-radius: 999px;
+      border: 1px solid rgba(199,168,94,.2);
+      animation: pressRing 2.2s ease-out .55s infinite;
+      pointer-events: none;
+    }
+    .open-btn:active {
+      transform: scale(.96);
+      background: rgba(199,168,94,.2);
+      border-color: rgba(199,168,94,.7);
+    }
+    /* Remove old btnBlink animation */
+    @keyframes btnBlink { 0%,100%,50% {} }
+
+    /* ── CROSS-BROWSER / CROSS-DEVICE BASELINE ── */
+
+    /* Prevent iOS text inflation on rotation */
+    html {
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    /* Remove iOS callout on long-press for non-interactive elements */
+    img, .tl-node, .fs-card-img, .couple-hero-photo {
+      -webkit-touch-callout: none;
+    }
+
+    /* Consistent focus outline for keyboard navigation */
+    :focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    /* Prevent overscroll bounce layout shift on Android Chrome */
+    body { overscroll-behavior-y: none; }
+
+    /* Firefox scrollbar */
+    * { scrollbar-width: thin; scrollbar-color: rgba(199,168,94,.3) transparent; }
+
+    /* ── TABLET (769–1024px) ── */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .ce-headline { font-size: clamp(4rem,7vw,6rem); }
+      .events-headline { font-size: clamp(4rem,7vw,6rem); }
+      .rsvp-left h2 { font-size: clamp(4rem,6vw,5.5rem); }
+      .couple-editorial { padding-left: clamp(40px,8vw,80px); padding-right: clamp(40px,8vw,80px); }
+      .tl-wrap { max-width: 700px; }
+      .fs-card { width: clamp(180px,28vw,240px); }
+    }
+
+    /* ── REDUCED MOTION ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+      .fs-track { animation: none !important; }
+      html { scroll-behavior: auto !important; }
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      #bottom-dock, #nav, #seal, #particles, .fs-chapter { display: none !important; }
+      body { background: white; color: black; }
+      section { page-break-inside: avoid; }
+    }
+
+  </style>
+</head>
+<body>
+
+<div id="progress"></div>
+<div id="particles" aria-hidden="true"></div>
+<div id="nav-blur"></div>
+<div id="cursor-glow"></div>
+
+<!-- SEAL -->
+<div id="seal">
+  <div class="seal-bg">
+    <img src="assets/img/seal-bg.webp" fetchpriority="high" decoding="async" alt="Nishant and Banani">
+  </div>
+
+  <!-- Luxury content -->
+  <div class="seal-inner">
+
+    <!-- Step 1: Eyebrow label -->
+    <p class="seal-eyebrow seal-s" data-s="1">A Wedding Invitation</p>
+
+    <!-- Step 2: Monogram -->
+    <div class="seal-mono seal-s" data-s="2">
+      <div class="seal-ring"></div>
+      <img src="assets/img/logo.webp" fetchpriority="high" decoding="async" alt="N&amp;B monogram">
+    </div>
+
+    <!-- Step 3: Names -->
+    <div class="seal-names">
+      <span class="sn-name seal-s" data-s="3">Nishant</span>
+      <span class="sn-amp seal-s" data-s="4">&amp;</span>
+      <span class="sn-name seal-s" data-s="5">Banani</span>
+    </div>
+
+    <!-- Step 4: Date pill -->
+    <div class="seal-date-pill seal-s" data-s="6">&#10022; &nbsp;10 &ndash; 11 December 2026 &nbsp;&#10022;</div>
+
+    <!-- Step 5: Tagline -->
+    <p class="seal-tagline seal-s" data-s="7">Save the Date</p>
+
+    <!-- Step 6: Countdown -->
+    <div class="seal-countdown seal-s" data-s="8">
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-days">00</div>
+        <div class="countdown-label">Days</div>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-hours">00</div>
+        <div class="countdown-label">Hours</div>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-mins">00</div>
+        <div class="countdown-label">Minutes</div>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-secs">00</div>
+        <div class="countdown-label">Seconds</div>
+      </div>
+    </div>
+
+    <!-- Step 7: Press to Open -->
+    <div class="open-wrap seal-s" data-s="9">
+      <button class="open-btn mag-btn ripple-host" id="openBtn" type="button" aria-label="Open invitation">
+        <span id="openBtnLabel">Press to Open</span>
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<!-- MAIN -->
+<div id="main" style="display:none;">
+
+<nav id="nav">
+  <img class="nav-logo" src="assets/img/logo.webp" alt="N&amp;B" id="navLogo">
+  <ul class="nav-links">
+    <li><a href="#couple" class="mag-btn">Our Story</a></li>
+    <li><a href="#events" class="mag-btn">Celebration</a></li>
+    <li><a href="#moments" class="mag-btn">Moments</a></li>
+  </ul>
+  <a href="#rsvp" class="mag-btn nav-rsvp">RSVP</a>
+</nav>
+
+<!-- MOBILE BOTTOM DOCK -->
+<nav id="bottom-dock" aria-label="Mobile navigation">
+  <a href="#couple" class="dock-item active" data-section="couple">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    <span>Our Story</span>
+  </a>
+  <a href="#events" class="dock-item" data-section="events">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    <span>Celebration</span>
+  </a>
+  <a href="#moments" class="dock-item" data-section="moments">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+    <span>Moments</span>
+  </a>
+  <a href="#rsvp" class="dock-item" data-section="rsvp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    <span>RSVP</span>
+  </a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg" id="heroBg">
+    <picture><source srcset="assets/img/hero-bg.avif" type="image/avif"><img src="assets/img/hero-bg.webp" fetchpriority="high" decoding="async" alt="Nishant &amp; Banani"></picture>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <img class="hero-ganesha hero-seq" data-hero="1" src="assets/img/ganesha.webp" alt="Ganesha" loading="lazy" decoding="async">
+    <div class="hero-date-pill hero-seq" data-hero="2">&#10022; &nbsp;10 &ndash; 11 December 2026&nbsp; &#10022;</div>
+    <div class="hero-names" id="heroNames">
+      <span class="hn-name hero-seq" data-hero="3">Nishant</span>
+      <span class="hn-amp hero-seq" data-hero="4">&amp;</span>
+      <span class="hn-name hero-seq" data-hero="5">Banani</span>
+    </div>
+    <p class="hero-subtext hero-seq" data-hero="6">Together with their families,<br><strong>Jyothi &amp; Kesavadas Menon</strong> and <strong>Deepa &amp; Ratan Kumar Das,</strong><br>joyfully invite you to celebrate their union.</p>
+    <div class="hero-dots hero-seq" data-hero="7">&#8901; &#8901; &#8901;</div>
+  </div>
+  <div class="scroll-cue">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7l5 5 5-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Scroll to explore
+  </div>
+</section>
+<!-- COUPLE -->
+<section id="couple">
+
+  <!-- Full-bleed photo -->
+  <div class="couple-hero-photo">
+    <div class="couple-hero-label">&#8212;&#160;Our Story&#160;&#8212;</div>
+    <picture>
+      <source srcset="assets/img/couple.avif" type="image/avif">
+      <img src="assets/img/couple.webp" loading="lazy" decoding="async" alt="Nishant &amp; Banani">
+    </picture>
+  </div>
+
+  <!-- Editorial body -->
+  <div class="couple-editorial">
+
+    <!-- Issue label -->
+    <div class="ce-issue reveal">
+      <div class="ce-issue-rule"></div>
+      <div class="ce-issue-text">Two Traditions · One Love</div>
+      <div class="ce-issue-rule"></div>
+    </div>
+
+    <!-- Story headline -->
+    <h2 class="ce-headline reveal">
+      From the<br>
+      <em>Brahmaputra</em><br>
+      to the<br>
+      <em>Backwaters.</em>
+    </h2>
+
+    <!-- Origin -->
+    <p class="ce-origin reveal">
+      She brings the grace of Assam.<br>
+      He carries the warmth of Kerala.
+    </p>
+
+    <!-- Story body -->
+    <p class="ce-story reveal">
+      Together, they&rsquo;re writing a story rooted in tradition, filled with love, and made even more meaningful by the people who matter most. Two families, one beginning &mdash; <strong>December 2026, Guwahati.</strong>
+    </p>
+
+    <!-- Parents -->
+    <div class="ce-parents-divider reveal"><span>Families</span></div>
+    <div class="ce-parents reveal">
+      <div class="ce-parent-side">
+        <div class="ce-parent-name">Nishant Menon</div>
+        <div class="ce-parent-label">Son of</div>
+        <div class="ce-parent-parents">Kesavadas &amp; Jyothi Menon</div>
+      </div>
+      <div class="ce-parent-side">
+        <div class="ce-parent-name">Banani Das</div>
+        <div class="ce-parent-label">Daughter of</div>
+        <div class="ce-parent-parents">Ratan Kumar Das &amp; Deepa Das</div>
+      </div>
+    </div>
+
+    <!-- Tags -->
+    <div class="ce-tags reveal">
+      <span>#NishaniForever</span>
+      <span style="flex-basis:100%; text-align:center;">#Two Traditions · One Love</span>
+    </div>
+
+  </div>
+</section>
+<!-- EVENTS / ITINERARY -->
+<section id="events">
+  <div class="events-header reveal">
+    <div class="events-label-row">
+      <span class="events-rule"></span>
+      <span class="events-label-text">Wedding Itinerary</span>
+      <span class="events-rule"></span>
+    </div>
+    <h2 class="events-headline">Two days of celebration.</h2>
+    <p class="events-subdate">10 &ndash; 11 December 2026 &middot; Guwahati, Assam</p>
+  </div>
+
+  <div class="tl-wrap">
+    <!-- Spine background line -->
+    <div class="tl-spine" aria-hidden="true"></div>
+    <div class="tl-spine-fill" id="tlSpineFill" aria-hidden="true"></div>
+
+    <!-- Day 1 label -->
+    <div class="tl-day-label reveal">
+      <div class="tl-day-text">Thursday &middot; 10 December</div>
+      <div class="tl-day-rule"></div>
+      <div class="tl-day-venue">Ratnamouli Palace</div>
+    </div>
+
+    <!-- Juron -->
+    <div class="tl-item reveal" data-tl="juron">
+      <div class="tl-node-col">
+        <div class="tl-node">
+          <!-- Garland / floral wreath -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 5c1.2-2 3.5-2.4 4.5-.8s.3 3.8-1 4.8"/>
+            <path d="M19 12c2 1.2 2.4 3.5.8 4.5s-3.8.3-4.8-1"/>
+            <path d="M12 19c-1.2 2-3.5 2.4-4.5.8S7.2 16 8.5 15"/>
+            <path d="M5 12c-2-1.2-2.4-3.5-.8-4.5S8 7.2 9 8.5"/>
+            <circle cx="12" cy="4" r="1" fill="var(--gold)" stroke="none"/>
+            <circle cx="20" cy="12" r="1" fill="var(--gold)" stroke="none"/>
+            <circle cx="12" cy="20" r="1" fill="var(--gold)" stroke="none"/>
+            <circle cx="4" cy="12" r="1" fill="var(--gold)" stroke="none"/>
+          </svg>
+        </div>
+        <div class="tl-connector"></div>
+      </div>
+      <div class="tl-content">
+        <div class="tl-time">2:00 PM</div>
+        <div class="tl-name">Juron</div>
+        <div class="tl-illus-label">Assamese Ritual</div>
+        <div class="tl-location">
+          <svg width="11" height="13" viewBox="0 0 11 13" fill="none"><path d="M5.5 1C3.01 1 1 3.01 1 5.5c0 3.375 4.5 7.5 4.5 7.5S10 8.875 10 5.5C10 3.01 7.99 1 5.5 1z" stroke="currentColor" stroke-width="1.2"/><circle cx="5.5" cy="5.5" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+          Temple Side
+        </div>
+        <p class="tl-desc">A cherished Assamese pre-wedding ritual where the groom&rsquo;s family presents the bride with her wedding trousseau, symbolizing their blessings and welcome into the family.</p>
+      </div>
+    </div>
+
+    <!-- Sangeet -->
+    <div class="tl-item reveal" data-tl="sangeet">
+      <div class="tl-node-col">
+        <div class="tl-node">
+          <!-- Temple bell -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v1"/>
+            <path d="M6.3 6.3C7.6 4.6 9.7 3.5 12 3.5s4.4 1.1 5.7 2.8C19 8 19.5 9.9 19.5 12c0 3.5-1 6.5-2.5 8H7c-1.5-1.5-2.5-4.5-2.5-8 0-2.1.5-4 1.8-5.7z"/>
+            <path d="M9.5 20a2.5 2.5 0 0 0 5 0"/>
+            <line x1="8" y1="13" x2="16" y2="13" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="tl-connector"></div>
+      </div>
+      <div class="tl-content">
+        <div class="tl-time">7:00 PM</div>
+        <div class="tl-name">Sangeet</div>
+        <div class="tl-illus-label">Celebration Night</div>
+        <div class="tl-location">
+          <svg width="11" height="13" viewBox="0 0 11 13" fill="none"><path d="M5.5 1C3.01 1 1 3.01 1 5.5c0 3.375 4.5 7.5 4.5 7.5S10 8.875 10 5.5C10 3.01 7.99 1 5.5 1z" stroke="currentColor" stroke-width="1.2"/><circle cx="5.5" cy="5.5" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+          Meridian Ball Room
+        </div>
+        <p class="tl-desc">High-energy performances, cinematic acts, and a late-night after-party you won&rsquo;t forget.</p>
+      </div>
+    </div>
+
+    <!-- Day 2 label -->
+    <div class="tl-day-label reveal">
+      <div class="tl-day-text">Friday &middot; 11 December</div>
+      <div class="tl-day-rule"></div>
+      <div class="tl-day-venue">Naamya Manor</div>
+    </div>
+
+    <!-- Wedding -->
+    <div class="tl-item reveal" data-tl="wedding">
+      <div class="tl-node-col">
+        <div class="tl-node">
+          <!-- Lamp / diya -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3c0 0 1.5 1.5 1.5 3S12 8 12 8s-1.5-1 -1.5-2S12 3 12 3z" fill="rgba(199,168,94,.25)"/>
+            <path d="M7 13c0-2.2 2.2-4 5-4s5 1.8 5 4"/>
+            <path d="M5 17h14l-1 3H6z"/>
+            <path d="M5 17c-.3-1 .2-2 1-2h12c.8 0 1.3 1 1 2"/>
+          </svg>
+        </div>
+        <div class="tl-connector"></div>
+      </div>
+      <div class="tl-content">
+        <div class="tl-time">9:30 AM</div>
+        <div class="tl-name">Wedding</div>
+        <div class="tl-illus-label">Biya Ceremony</div>
+        <div class="tl-location">
+          <svg width="11" height="13" viewBox="0 0 11 13" fill="none"><path d="M5.5 1C3.01 1 1 3.01 1 5.5c0 3.375 4.5 7.5 4.5 7.5S10 8.875 10 5.5C10 3.01 7.99 1 5.5 1z" stroke="currentColor" stroke-width="1.2"/><circle cx="5.5" cy="5.5" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+          Front Lawn
+        </div>
+        <p class="tl-desc">The sacred Biya — Assamese wedding ceremony where the bride and groom are united through traditional Hindu rituals: the exchange of garlands, Homam (sacred fire), and Saptapadi (seven sacred steps).</p>
+      </div>
+    </div>
+
+    <!-- Reception -->
+    <div class="tl-item reveal" data-tl="reception">
+      <div class="tl-node-col">
+        <div class="tl-node">
+          <!-- Lotus -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21c0 0-6-4-6-9 0-2 1.5-3.5 3-3.5 1 0 2 .6 3 1.8 1-1.2 2-1.8 3-1.8 1.5 0 3 1.5 3 3.5 0 5-6 9-6 9z"/>
+            <path d="M12 21c0 0-3-3.5-3-7" stroke-opacity=".5"/>
+            <path d="M12 21c0 0 3-3.5 3-7" stroke-opacity=".5"/>
+            <path d="M6 12c-2-1-3.5-3-2.5-5 .5-1 1.8-1.5 3-.8"/>
+            <path d="M18 12c2-1 3.5-3 2.5-5-.5-1-1.8-1.5-3-.8"/>
+          </svg>
+        </div>
+        <div class="tl-connector"></div>
+      </div>
+      <div class="tl-content">
+        <div class="tl-time">6:00 PM</div>
+        <div class="tl-name">Reception</div>
+        <div class="tl-illus-label">Evening Gathering</div>
+        <div class="tl-location">
+          <svg width="11" height="13" viewBox="0 0 11 13" fill="none"><path d="M5.5 1C3.01 1 1 3.01 1 5.5c0 3.375 4.5 7.5 4.5 7.5S10 8.875 10 5.5C10 3.01 7.99 1 5.5 1z" stroke="currentColor" stroke-width="1.2"/><circle cx="5.5" cy="5.5" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+          Hall
+        </div>
+        <p class="tl-desc">A final evening of glamour and timeless memories &mdash; a celebration that brings together everyone we love under one roof.</p>
+      </div>
+    </div>
+
+  </div><!-- /tl-wrap -->
+
+</section>
+<!-- MOMENTS -->
+<section id="moments">
+  <div class="moments-header">
+    <span class="section-label reveal">&#8212;&#160;Glimpses&#160;&#8212;</span>
+    <h2 class="reveal">The moments that<br>brought us here.</h2>
+    <p class="moments-sub reveal">Mehendi. Sangeet. Engagement. All of us, together.</p>
+  </div>
+
+  <!-- ── Chapter 01: Mehendi ── -->
+  <div class="chapter-label reveal">
+    <div class="chapter-rule"></div>
+    <div class="chapter-identity">
+      <span class="chapter-number">01</span>
+      <div class="chapter-text">
+        <span class="chapter-title">Mehendi &amp; Get-Together</span>
+        <span class="chapter-subtitle">Colours, Music &amp; Joy</span>
+      </div>
+    </div>
+    <div class="chapter-rule"></div>
+  </div>
+  <div class="fs-chapter">
+    <div class="fs-track" id="fsMeh">
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/meh-01.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/meh-02.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/meh-03.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/meh-04.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/meh-05.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/meh-06.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/meh-07.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/meh-08.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/meh-09.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/meh-10.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/meh-11.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/meh-12.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/meh-13.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/meh-14.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <!-- duplicate set for seamless loop -->
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/meh-01.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/meh-02.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/meh-03.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/meh-04.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/meh-05.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/meh-06.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/meh-07.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/meh-08.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/meh-09.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/meh-10.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/meh-11.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/meh-12.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/meh-13.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/meh-14.webp" loading="lazy" decoding="async" alt=""></div></div>
+    </div>
+
+  <!-- ── Chapter 02: Engagement ── -->
+  <div class="chapter-label reveal">
+    <div class="chapter-rule"></div>
+    <div class="chapter-identity">
+      <span class="chapter-number">02</span>
+      <div class="chapter-text">
+        <span class="chapter-title">Engagement</span>
+        <span class="chapter-subtitle">When It All Began</span>
+      </div>
+    </div>
+    <div class="chapter-rule"></div>
+  </div>
+  <div class="fs-chapter">
+    <div class="fs-track" id="fsEng">
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/eng-01.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/eng-02.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/eng-03.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/eng-04.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/eng-05.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/eng-06.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/eng-07.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/eng-08.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/eng-09.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/eng-10.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/eng-11.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/eng-12.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/eng-13.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card"><div class="fs-card-img"><img src="assets/img/eng-14.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <!-- duplicate set for seamless loop -->
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/eng-01.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/eng-02.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/eng-03.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/eng-04.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/eng-05.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/eng-06.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/eng-07.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/eng-08.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/eng-09.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/eng-10.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/eng-11.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/eng-12.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/eng-13.webp" loading="lazy" decoding="async" alt=""></div></div>
+      <div class="fs-card" aria-hidden="true"><div class="fs-card-img"><img src="assets/img/eng-14.webp" loading="lazy" decoding="async" alt=""></div></div>
+    </div>
+
+</section>
+
+<!-- RSVP -->
+<section id="rsvp">
+  <!-- LEFT: warm note -->
+  <div class="rsvp-left">
+    <span class="section-label reveal">&#8212;&#160;RSVP&#160;&#8212;</span>
+    <h2 class="reveal">We can&rsquo;t wait<br>to celebrate<br>with you.</h2>
+    <p class="rsvp-copy reveal">December evenings in Guwahati glow with warmth, colour, and laughter. Come with your blessings, your best dance moves, and an open heart.</p>
+    <div class="rsvp-details reveal">
+      <div class="rsvp-detail-row">
+        <div class="rsvp-detail-dot"></div>
+        <div>
+          <div class="rsvp-detail-label">Day 1 &middot; 10 December</div>
+          <div class="rsvp-detail-val">Ratnamouli Palace &mdash; Juron &amp; Sangeet</div>
+        </div>
+      </div>
+      <div class="rsvp-detail-row">
+        <div class="rsvp-detail-dot"></div>
+        <div>
+          <div class="rsvp-detail-label">Day 2 &middot; 11 December</div>
+          <div class="rsvp-detail-val">Naamya Manor &mdash; Biya &amp; Reception</div>
+        </div>
+      </div>
+      <div class="rsvp-detail-row">
+        <div class="rsvp-detail-dot"></div>
+        <div>
+          <div class="rsvp-detail-label">Nearest Airport</div>
+          <div class="rsvp-detail-val">Lokpriya Gopinath Bordoloi International, Guwahati</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: glass card with sequential fields -->
+  <div class="rsvp-right reveal">
+
+    <!-- Success overlay — shown after submission -->
+    <div id="rsvpSuccess" aria-live="polite" aria-atomic="true">
+      <img src="assets/img/ganesha.webp" class="success-ganesha" alt="" aria-hidden="true">
+      <div class="success-title">Thank you!</div>
+      <div class="success-divider"></div>
+      <p class="success-sub">Your RSVP has been received.<br>We can't wait to celebrate with you<br>in December 2026.</p>
+      <div class="success-hashtag">#NishaniForever</div>
+      <a href="#hero" class="success-back-btn" id="backToInvite">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 4l-4 4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to Invitation
+      </a>
+    </div>
+
+    <form class="rsvp-form" id="rsvpForm" novalidate>
+
+      <div class="rsvp-field" data-step="1">
+        <label for="fname">Your Name</label>
+        <input type="text" id="fname" name="first-name" placeholder="First name" required autocomplete="given-name">
+      </div>
+
+      <div class="rsvp-field" data-step="2">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="last-name" placeholder="Last name" required autocomplete="family-name">
+      </div>
+
+      <div class="rsvp-field" data-step="3">
+        <label for="attendance">Will you attend?</label>
+        <select id="attendance" name="attendance" required>
+          <option value="" disabled selected>Please select&hellip;</option>
+          <option value="Joyfully Attending">Yes, joyfully!</option>
+          <option value="Unable to Attend">Unable to attend</option>
+        </select>
+      </div>
+
+      <div class="rsvp-field" data-step="4">
+        <label for="guests">Number of guests</label>
+        <select id="guests" name="guests">
+          <option value="1">Just me</option>
+          <option value="2" selected>2 guests</option>
+          <option value="3">3 guests</option>
+          <option value="4">4 guests</option>
+          <option value="5+">5 or more</option>
+        </select>
+      </div>
+
+      <div class="rsvp-field" data-step="5">
+        <label for="message">A note for the couple</label>
+        <textarea id="message" name="message" placeholder="Blessings, song requests, dietary notes&hellip;" rows="3"></textarea>
+      </div>
+
+      <div id="formMsg"></div>
+
+      <button type="submit" class="submit-btn ripple-host" id="submitBtn" data-step="6">
+        <span id="submitText">Send RSVP</span>
+        <svg id="submitArrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <!-- loading ring -->
+        <svg id="submitRing" width="20" height="20" viewBox="0 0 20 20" style="display:none;animation:spinRing .75s linear infinite">
+          <circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="30 20" stroke-linecap="round"/>
+        </svg>
+        <!-- gold checkmark -->
+        <svg id="submitCheck" width="20" height="20" viewBox="0 0 20 20" style="display:none">
+          <polyline points="4,10 8,15 16,5" fill="none" stroke="#C7A85E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="24" stroke-dashoffset="24">
+            <animate attributeName="stroke-dashoffset" from="24" to="0" dur=".45s" fill="freeze" begin="0s"/>
+          </polyline>
+        </svg>
+      </button>
+
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-quote reveal" id="footerQuote" data-delay="1">
+      <p class="footer-line1">Every love story begins</p>
+      <p class="footer-line2">with a single moment.</p>
+    </div>
+    <div class="footer-thanks reveal" id="footerThanks" data-delay="2">
+      <p class="footer-thankyou">Thank you</p>
+      <p class="footer-sub">for becoming a part of ours.</p>
+    </div>
+    <div class="footer-monogram reveal" data-delay="3">
+      <img class="footer-logo" src="assets/img/logo.webp" alt="N&amp;B" loading="lazy" decoding="async">
+      <div class="footer-names">Nishant<em>&amp;</em>Banani</div>
+      <div class="footer-date">10 &ndash; 11 December 2026 &middot; Guwahati, Assam</div>
+    </div>
+  </div>
+</footer>
+</div>
+
+<script>
+/* ── VIEWPORT HEIGHT (--vh) — CSS custom property for true mobile vh ── */
+(function(){
+  var root = document.documentElement;
+  function setVH() {
+    var vh = window.innerHeight * 0.01;
+    root.style.setProperty('--vh', vh + 'px');
+  }
+  // Run immediately
+  setVH();
+  // Re-run on resize (debounced 120ms — avoids iOS keyboard jitter)
+  var resizeTimer;
+  window.addEventListener('resize', function(){
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(setVH, 120);
+  }, {passive:true});
+  // Re-run on orientation change — iOS fires before innerHeight updates, so delay slightly
+  window.addEventListener('orientationchange', function(){
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(setVH, 350);
+  }, {passive:true});
+  // Re-run on page restore from bfcache (iOS back/forward)
+  window.addEventListener('pageshow', function(e){
+    if (e.persisted) { clearTimeout(resizeTimer); setVH(); }
+  }, {passive:true});
+})();
+
+(function(){
+  // ── SEAL: sequence elements in on load ──
+  const sealSteps = {
+    1:   0,   // "A Wedding Invitation"
+    2: 180,   // Monogram
+    3: 420,   // Nishant
+    4: 580,   // &
+    5: 720,   // Banani
+    6: 900,   // Date pill
+    7:1060,   // Tagline
+    8:1240,   // Countdown
+    9:1480,   // Button
+  };
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.seal-s').forEach(el => {
+      const step = parseInt(el.dataset.s || 1);
+      setTimeout(() => el.classList.add('in'), sealSteps[step] || 0);
+    });
+  });
+
+  // ── OPEN BUTTON: ripple + soft click sound + haptic + blur → page ──
+  document.getElementById('openBtn').addEventListener('click', function(e) {
+    const btn  = this;
+    const seal = document.getElementById('seal');
+
+    // 1. Haptic
+    if (navigator.vibrate) navigator.vibrate([12, 30, 8]);
+
+    // 2. Soft click sound via Web Audio
+    try {
+      const ac  = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = ac.createOscillator();
+      const g   = ac.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(880, ac.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(440, ac.currentTime + 0.08);
+      g.gain.setValueAtTime(0.18, ac.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.001, ac.currentTime + 0.12);
+      osc.connect(g); g.connect(ac.destination);
+      osc.start(); osc.stop(ac.currentTime + 0.12);
+    } catch(e) {}
+
+    // 3. Button label → "Opening..."
+    const lbl = document.getElementById('openBtnLabel');
+    if (lbl) lbl.textContent = 'Opening…';
+    btn.style.pointerEvents = 'none';
+
+    // 4. Seal blurs out then scales away
+    const bg = seal.querySelector('.seal-bg img');
+    if (bg) {
+      bg.style.transition = 'filter 1s ease, transform 1.2s ease, opacity 1.2s ease';
+      bg.style.filter = 'blur(28px) brightness(.4)';
+      bg.style.transform = 'scale(1.12)';
+    }
+    // Fade out seal inner content
+    const inner = seal.querySelector('.seal-inner');
+    if (inner) {
+      inner.style.transition = 'opacity .5s ease, transform .5s ease';
+      inner.style.opacity = '0';
+      inner.style.transform = 'scale(.94)';
+    }
+
+    // 5. After content fades, scale-out seal + reveal page
+    setTimeout(() => {
+      seal.classList.add('leaving');
+      setTimeout(() => {
+        seal.style.display = 'none';
+        document.getElementById('main').style.display = 'block';
+        requestAnimationFrame(() => {
+          // Hero sequence
+          const heroDelay = [0, 120, 280, 460, 620, 800, 980, 1120];
+          document.querySelectorAll('.hero-seq').forEach(el => {
+            const step = parseInt(el.dataset.hero || '1');
+            setTimeout(() => el.classList.add('visible'), heroDelay[step] || step * 130);
+          });
+          // Rest of page
+          document.querySelectorAll('.reveal:not(.hero-seq)').forEach((el, i) =>
+            setTimeout(() => el.classList.add('up'), 200 + i * 55)
+          );
+        });
+      }, 1100);
+    }, 480);
+  });
+})();
+document.getElementById('navLogo').addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+
+const prog = document.getElementById('progress');
+const nav  = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  const s = window.scrollY, t = document.documentElement.scrollHeight - window.innerHeight;
+  /* ring updated by micro-interactions script */
+  if (s > 100) {
+    nav.classList.add('visible');
+  } else {
+    nav.classList.remove('visible');
+  }
+  nav.classList.toggle('scrolled', s > 140);
+}, {passive:true});
+
+const heroBg = document.getElementById('heroBg');
+const heroNames = document.getElementById('heroNames');
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+if (!isIOS) {
+  let rafPending = false;
+  window.addEventListener('scroll', () => {
+    if (rafPending) return;
+    rafPending = true;
+    requestAnimationFrame(() => {
+      const y = window.scrollY;
+      if (heroBg) heroBg.style.transform = `translateY(${y*.15}px)`;
+      if (heroNames) { heroNames.style.opacity = Math.max(0,1-y/480); heroNames.style.transform = `translateY(${y*.14}px)`; }
+      rafPending = false;
+    });
+  }, {passive:true});
+}
+
+// [SAFARI COMPAT] IntersectionObserver fallback for iOS Safari < 12.2
+if (!('IntersectionObserver' in window)) {
+  // Immediately show all reveal elements on unsupported browsers
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('up'));
+} else {
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    // Stagger siblings within the same section
+    const section = el.closest('section, #hero, #couple, #events, #moments, #rsvp');
+    if (section && !section._seq) {
+      section._seq = 0;
+      // Sequence all reveal children of this section
+      const siblings = Array.from(section.querySelectorAll('.reveal:not(.up)'));
+      siblings.forEach((sib, i) => {
+        // Only override delay if not already manually set
+        if (!sib.dataset.delay) {
+          sib.style.transitionDelay = (i * 90) + 'ms';
+        }
+        setTimeout(() => {
+          sib.classList.add('up');
+          io.unobserve(sib);
+        }, i * 90);
+      });
+      section._seq = 1;
+    } else if (!el.classList.contains('up')) {
+      el.classList.add('up');
+      io.unobserve(el);
+    }
+  });
+}, {threshold:0.06, rootMargin:'0px 0px -40px 0px'});
+setTimeout(() => {
+  // Observe section containers for group sequencing, plus individual reveals
+  document.querySelectorAll('section, #hero, #couple, #events, #moments, #rsvp').forEach(sec => io.observe(sec));
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+}, 200);
+
+} // end IntersectionObserver support check
+
+/* ── TIMELINE: touch tap + gold spine fill ── */
+(function(){
+  const isTouch = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+
+  /* Touch: tap toggles tl-open */
+  if (isTouch) {
+    document.querySelectorAll('.tl-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const open = item.classList.contains('tl-open');
+        document.querySelectorAll('.tl-item.tl-open').forEach(o => o.classList.remove('tl-open'));
+        if (!open) item.classList.add('tl-open');
+      });
+    });
+  }
+
+  /* Scroll-driven connector: fill gold as each item enters viewport */
+  const tlItems = document.querySelectorAll('.tl-item');
+  const connectorIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const connector = entry.target.querySelector('.tl-connector');
+      if (connector) {
+        if (entry.isIntersecting) {
+          connector.style.setProperty('--fill', '1');
+          connector.querySelector && (connector.style.background = 'var(--gold)');
+          connector.style.background = entry.isIntersecting
+            ? 'linear-gradient(to bottom, var(--gold), rgba(199,168,94,.25))'
+            : 'rgba(199,168,94,.2)';
+        }
+      }
+    });
+  }, { threshold: 0.4 });
+  tlItems.forEach(item => connectorIO.observe(item));
+})();
+
+/* ── FILMSTRIP — touch-hold to pause ── */
+(function(){
+  document.querySelectorAll('.fs-chapter').forEach(chapter => {
+    // Touch: hold to pause, release to resume
+    chapter.addEventListener('touchstart', () => chapter.classList.add('paused'), { passive: true });
+    chapter.addEventListener('touchend',   () => chapter.classList.remove('paused'), { passive: true });
+    chapter.addEventListener('touchcancel',() => chapter.classList.remove('paused'), { passive: true });
+  });
+})();
+
+/* ── CSS PARTICLES (GPU, no rAF loop) ── */
+(function(){
+  const container = document.getElementById('particles');
+  if (!container) return;
+  const count = window.innerWidth < 600 ? 20 : 40;
+  const rand = (a, b) => a + Math.random() * (b - a);
+  const frag = document.createDocumentFragment();
+  for (let i = 0; i < count; i++) {
+    const s = document.createElement('span');
+    const size   = rand(1.5, 4);
+    const dur    = rand(7, 16);
+    const delay  = -rand(0, dur); // start mid-animation for instant coverage
+    const alpha  = rand(0.2, 0.65);
+    // Random drift vectors
+    const tx1 = (rand(-60,  60)).toFixed(0) + 'px';
+    const ty1 = (rand(-80,  80)).toFixed(0) + 'px';
+    const tx2 = (rand(-100, 100)).toFixed(0) + 'px';
+    const ty2 = (rand(-60,  60)).toFixed(0) + 'px';
+    const tx3 = (rand(-40,  40)).toFixed(0) + 'px';
+    const ty3 = (rand(-100, 100)).toFixed(0) + 'px';
+    s.style.cssText = [
+      `--x:${rand(0,100).toFixed(1)}vw`,
+      `--y:${rand(0,100).toFixed(1)}vh`,
+      `--s:${size.toFixed(1)}px`,
+      `--d:${dur.toFixed(1)}s`,
+      `--delay:${delay.toFixed(1)}s`,
+      `--a:${alpha.toFixed(2)}`,
+      `--tx1:${tx1}`,`--ty1:${ty1}`,
+      `--tx2:${tx2}`,`--ty2:${ty2}`,
+      `--tx3:${tx3}`,`--ty3:${ty3}`,
+    ].join(';');
+    frag.appendChild(s);
+  }
+  container.appendChild(frag);
+  // Touch: tilt particles slightly toward touch point once
+  window.addEventListener('touchmove', e => {
+    const t = e.touches[0];
+    container.style.transform = `translate(${(t.clientX/window.innerWidth-.5)*6}px,${(t.clientY/window.innerHeight-.5)*6}px)`;
+  }, {passive:true});
+  window.addEventListener('touchend', () => { container.style.transform=''; }, {passive:true});
+  // Mouse: subtle container parallax (rAF-based, not setInterval)
+  let mx=.5, my=.5, mxC=.5, myC=.5, rafPar;
+  document.addEventListener('mousemove', e => { mx=e.clientX/window.innerWidth; my=e.clientY/window.innerHeight; }, {passive:true});
+  function stepPar() {
+    mxC += (mx - mxC) * 0.06;
+    myC += (my - myC) * 0.06;
+    container.style.transform = `translate(${(mxC-.5)*10}px,${(myC-.5)*10}px)`;
+    rafPar = requestAnimationFrame(stepPar);
+  }
+  rafPar = requestAnimationFrame(stepPar);
+})();
+
+/* ── RSVP FORM — fetch() submission ── */
+(function () {
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwFZxRC65bTwG75TbDIk_sGtJIGOU66a03tm83xOtyPV_5cw2xnNQa16UziizW7Bq8/exec';
+
+  const form       = document.getElementById('rsvpForm');
+  const btn        = document.getElementById('submitBtn');
+  const btnText    = document.getElementById('submitText');
+  const btnArrow   = document.getElementById('submitArrow');
+  const btnRing    = document.getElementById('submitRing');
+  const btnCheck   = document.getElementById('submitCheck');
+  const msgEl      = document.getElementById('formMsg');
+  const successEl  = document.getElementById('rsvpSuccess');
+
+  if (!form) return;
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    // ── Collect payload ──
+    const checkedEvents = [...form.querySelectorAll('input[name="events"]:checked')]
+      .map(c => c.value).join(', ');
+
+    const payload = {
+      'first-name': (form['first-name']?.value || '').trim(),
+      'last-name':  (form['last-name']?.value  || '').trim(),
+      'email':      (form['email']?.value       || '').trim(),
+      'attendance': form['attendance']?.value   || '',
+      'guests':     form['guests']?.value       || '',
+      'events':     checkedEvents,
+      'message':    (form['message']?.value     || '').trim(),
+    };
+
+    // Basic validation
+    if (!payload['first-name']) {
+      showMsg('Please enter your name.', 'error');
+      form['first-name']?.focus();
+      return;
+    }
+
+    // ── Loading state ──
+    btn.disabled = true;
+    btn.classList.add('loading');
+    btnText.textContent = 'Sending…';
+    btnArrow.style.display = 'none';
+    btnRing.style.display  = 'inline-block';
+    btnCheck.style.display = 'none';
+    msgEl.textContent = '';
+    msgEl.className = '';
+
+    try {
+      // Google Apps Script requires no-cors; response is opaque — we treat any non-throw as success
+      await fetch(SCRIPT_URL, {
+        method:  'POST',
+        mode:    'no-cors',
+        headers: { 'Content-Type': 'text/plain' },
+        body:    JSON.stringify(payload),
+      });
+
+      // ── Success state ──
+      btnRing.style.display  = 'none';
+      btnCheck.style.display = 'inline-block';
+      btn.classList.remove('loading');
+      btn.classList.add('success');
+      btnText.textContent = 'RSVP Sent';
+
+      // Small delay then reveal the full success panel
+      setTimeout(() => {
+        successEl.classList.add('visible');
+        form.reset();
+        // trigger confetti if available
+        if (typeof launchConfetti === 'function') launchConfetti();
+        // haptic feedback
+        if (navigator.vibrate) navigator.vibrate([10, 40, 10]);
+      }, 600);
+
+    } catch (err) {
+      // ── Error state ──
+      btnRing.style.display  = 'none';
+      btnArrow.style.display = 'inline-block';
+      btn.classList.remove('loading');
+      btn.disabled = false;
+      btnText.textContent = 'Send RSVP';
+      showMsg('Something went wrong. Please try again or contact us directly.', 'error');
+    }
+  });
+
+  function showMsg(text, type) {
+    msgEl.textContent = text;
+    msgEl.className   = type || '';
+  }
+})();
+
+/* ── Countdown to 10 Dec 2026 ── */
+(function() {
+  const target = new Date('2026-12-10T09:30:00').getTime();
+  function tick() {
+    const now  = Date.now();
+    const diff = Math.max(0, target - now);
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000)  / 60000);
+    const s = Math.floor((diff % 60000)    / 1000);
+    const pad = n => String(n).padStart(2,'0');
+    const el = id => document.getElementById(id);
+    if (el('cd-days'))  el('cd-days').textContent  = pad(d);
+    if (el('cd-hours')) el('cd-hours').textContent = pad(h);
+    if (el('cd-mins'))  el('cd-mins').textContent  = pad(m);
+    if (el('cd-secs'))  el('cd-secs').textContent  = pad(s);
+  }
+  tick();
+  // Store interval ref so it can be cleared if section removed
+  var cdInterval = setInterval(tick, 1000);
+})();
+</script>
+
+
+
+
+<script>
+/* ── BANSURI FLUTE AMBIENT ── */
+(function(){
+  var ctx, master, started = false, muted = false;
+
+  function buildAudio() {
+    ctx = new (window.AudioContext || window.webkitAudioContext)();
+    master = ctx.createGain();
+    master.gain.setValueAtTime(0, ctx.currentTime);
+    master.gain.linearRampToValueAtTime(0.15, ctx.currentTime + 5);
+    master.connect(ctx.destination);
+
+    var longRev  = makeReverb(5.5, 2.2);   // cathedral reverb for flute
+    var shortRev = makeReverb(1.2, 1.8);   // tight reverb for drone
+
+    // ── Tanpura drone (very low, background) ──
+    [130.81, 196.00, 261.63].forEach(function(f, i) {
+      var osc = ctx.createOscillator();
+      var g   = ctx.createGain();
+      var lfo = ctx.createOscillator();
+      var lg  = ctx.createGain();
+      lfo.frequency.value = 0.035 + i * 0.02;
+      lg.gain.value = 0.5;
+      lfo.connect(lg); lg.connect(osc.frequency); lfo.start();
+      osc.type = 'sine';
+      osc.frequency.value = f;
+      g.gain.value = i === 0 ? 0.14 : 0.07;
+      osc.connect(g); g.connect(shortRev); shortRev.connect(master);
+      osc.start();
+    });
+
+    // ── Bansuri flute melody ──
+    bansuriMelody(longRev);
+  }
+
+  function bansuriNote(freq, startTime, duration, vol, bend, rev) {
+    var osc    = ctx.createOscillator();
+    var g      = ctx.createGain();
+    var filter = ctx.createBiquadFilter();
+    // Bansuri timbre: mix of sine + a whisper of sawtooth
+    var osc2   = ctx.createOscillator();
+    var g2     = ctx.createGain();
+
+    filter.type = 'bandpass';
+    filter.frequency.value = freq * 1.8;
+    filter.Q.value = 3.5;
+
+    // Main tone
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(bend ? freq * (1 - bend) : freq, startTime);
+    osc.frequency.linearRampToValueAtTime(freq, startTime + 0.18);
+
+    // Breath noise layer
+    osc2.type = 'sawtooth';
+    osc2.frequency.value = freq;
+    g2.gain.value = 0.018;
+
+    // Gentle vibrato after attack
+    var vib  = ctx.createOscillator();
+    var vibG = ctx.createGain();
+    vib.frequency.value = 5.2;
+    vibG.gain.setValueAtTime(0, startTime);
+    vibG.gain.linearRampToValueAtTime(0, startTime + 0.25);
+    vibG.gain.linearRampToValueAtTime(3.5, startTime + 0.55);
+    vib.connect(vibG); vibG.connect(osc.frequency); vib.start(startTime); vib.stop(startTime + duration);
+
+    // Envelope — soft attack, natural decay
+    var atk = 0.14, rel = duration * 0.38;
+    g.gain.setValueAtTime(0,   startTime);
+    g.gain.linearRampToValueAtTime(vol, startTime + atk);
+    g.gain.setValueAtTime(vol, startTime + duration - rel);
+    g.gain.linearRampToValueAtTime(0,   startTime + duration);
+
+    osc.connect(filter); filter.connect(g);
+    osc2.connect(g2);
+    g.connect(rev);  rev.connect(master);
+    g2.connect(rev);
+    osc.start(startTime);  osc.stop(startTime + duration + 0.05);
+    osc2.start(startTime); osc2.stop(startTime + duration + 0.05);
+  }
+
+  function bansuriMelody(rev) {
+    // Yaman raga — evocative, romantic, evening raga
+    // Notes: Sa Re Ga Ma# Pa Dha Ni Sa  (C D E F# G A B C)
+    var Sa  = 523.25;  // C5
+    var Re  = 587.33;  // D5
+    var Ga  = 659.25;  // E5
+    var Ma  = 739.99;  // F#5 (Yaman's raised Ma)
+    var Pa  = 783.99;  // G5
+    var Dha = 880.00;  // A5
+    var Ni  = 987.77;  // B5
+    var Sa2 = 1046.50; // C6
+    var Ni0 = 493.88;  // B4 (lower octave)
+    var Pa0 = 392.00;  // G4
+    var Ma0 = 369.99;  // F#4
+    var Ga0 = 329.63;  // E4
+
+    // Phrase structure: slow, meditative, with silences
+    // [freq, duration(s), volume, bend(0=none)]
+    var phrases = [
+      // Alaap — ascending
+      [Pa0,  3.2, 0.13, 0.015],
+      [null, 1.4],
+      [Ni0,  2.8, 0.14, 0.012],
+      [Sa,   4.5, 0.16, 0.010],
+      [null, 2.0],
+      [Re,   2.4, 0.15, 0.012],
+      [Ga,   3.8, 0.16, 0.010],
+      [Ma,   5.0, 0.17, 0.008], // linger on Ma — Yaman's signature
+      [null, 1.8],
+      [Pa,   3.5, 0.16, 0.010],
+      [null, 1.2],
+      [Dha,  2.6, 0.15, 0.012],
+      [Ni,   3.2, 0.15, 0.010],
+      [Sa2,  5.5, 0.18, 0.006], // top Sa — peak
+      [null, 2.5],
+      // Descent
+      [Ni,   2.8, 0.14, 0.010],
+      [Dha,  3.5, 0.15, 0.010],
+      [Pa,   4.0, 0.16, 0.008],
+      [null, 1.5],
+      [Ma,   3.2, 0.15, 0.010],
+      [Ga,   2.8, 0.14, 0.012],
+      [Re,   3.5, 0.14, 0.010],
+      [Sa,   6.0, 0.15, 0.006], // resolve to Sa
+      [null, 3.0],
+      // Second phrase — madhya laya (slightly more movement)
+      [Sa,   1.8, 0.13, 0.012],
+      [Re,   1.4, 0.12, 0.012],
+      [Ga,   1.6, 0.13, 0.010],
+      [Ma,   2.5, 0.15, 0.008],
+      [Pa,   1.8, 0.14, 0.010],
+      [Ma,   1.4, 0.13, 0.010],
+      [Ga,   2.0, 0.13, 0.010],
+      [Re,   1.6, 0.12, 0.012],
+      [Sa,   3.5, 0.14, 0.008],
+      [null, 2.0],
+      [Ni0,  2.2, 0.11, 0.012],
+      [Sa,   4.0, 0.13, 0.008],
+      [null, 3.5],
+      // Gentle flourish
+      [Pa,   1.4, 0.12, 0.010],
+      [Dha,  1.6, 0.13, 0.010],
+      [Ni,   1.8, 0.14, 0.010],
+      [Sa2,  2.4, 0.15, 0.006],
+      [Ni,   1.2, 0.12, 0.010],
+      [Dha,  1.4, 0.12, 0.010],
+      [Pa,   2.8, 0.14, 0.008],
+      [null, 1.8],
+      [Ma,   2.4, 0.13, 0.010],
+      [Ga,   2.0, 0.12, 0.010],
+      [Re,   2.4, 0.12, 0.012],
+      [Sa,   7.0, 0.14, 0.006], // final resolution
+    ];
+
+    var t = ctx.currentTime + 8; // wait 8s for drone to settle
+    phrases.forEach(function(p) {
+      if (!p[0]) { t += p[1]; return; } // rest
+      bansuriNote(p[0], t, p[1], p[2], p[3], rev);
+      t += p[1] + 0.08; // tiny gap between notes
+    });
+
+    // Loop: restart after full phrase
+    var totalDur = t - ctx.currentTime;
+    setTimeout(function loop() {
+      if (!started || muted) { setTimeout(loop, 1000); return; }
+      bansuriMelody(rev);
+    }, totalDur * 1000 * 0.92); // slight overlap for seamless feel
+  }
+
+  function makeReverb(duration, decay) {
+    var conv = ctx.createConvolver();
+    var rate = ctx.sampleRate;
+    var len  = Math.floor(rate * duration);
+    var buf  = ctx.createBuffer(2, len, rate);
+    for (var c = 0; c < 2; c++) {
+      var d = buf.getChannelData(c);
+      for (var i = 0; i < len; i++) {
+        d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, decay);
+      }
+    }
+    conv.buffer = buf;
+    var wet = ctx.createGain(); wet.gain.value = 0.68;
+    var dry = ctx.createGain(); dry.gain.value = 0.32;
+    conv.connect(wet);
+    conv._dest = null;
+    var origConnect = conv.connect.bind(conv);
+    conv.connect = function(dest) {
+      wet.connect(dest);
+    };
+    return conv;
+  }
+
+  function toggleMute() {
+    if (!started) { start(); return; }
+    muted = !muted;
+    master.gain.cancelScheduledValues(ctx.currentTime);
+    if (muted) {
+      master.gain.linearRampToValueAtTime(0, ctx.currentTime + 1.5);
+    } else {
+      master.gain.linearRampToValueAtTime(0.15, ctx.currentTime + 2);
+    }
+    updateBtn();
+  }
+
+  function start() {
+    if (started) return;
+    started = true;
+    buildAudio();
+    updateBtn();
+  }
+
+  function updateBtn() {
+    var btn = document.getElementById('music-btn');
+    if (!btn) return;
+    var on = started && !muted;
+    btn.innerHTML = on
+      ? '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>'
+      : '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>';
+    btn.title = on ? 'Mute music' : 'Play music';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.createElement('button');
+    btn.id = 'music-btn';
+    btn.title = 'Play music';
+    btn.setAttribute('aria-label', 'Toggle ambient music');
+    btn.innerHTML = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>';
+    btn.style.cssText = [
+      'position:fixed','bottom:28px','right:28px','z-index:300',
+      'width:46px','height:46px','border-radius:50%',
+      'background:rgba(255,255,255,0.1)',
+      'backdrop-filter:blur(12px)','-webkit-backdrop-filter:blur(12px)',
+      '-webkit-transform:translateZ(0)',
+      'border:1px solid rgba(255,255,255,0.28)',
+      'color:#fff','cursor:pointer',
+      'display:flex','align-items:center','justify-content:center',
+      'transition:background .25s,transform .18s,box-shadow .25s',
+      'box-shadow:0 2px 10px rgba(0,0,0,0.08)'
+    ].join(';');
+    btn.addEventListener('click', toggleMute);
+    btn.addEventListener('mouseenter', function(){ this.style.background='rgba(255,255,255,0.2)'; this.style.transform='scale(1.1)'; });
+    btn.addEventListener('mouseleave', function(){ this.style.background='rgba(255,255,255,0.1)'; this.style.transform='scale(1)'; });
+    document.body.appendChild(btn);
+
+    function autoStart() {
+      start();
+      document.removeEventListener('click', autoStart);
+      document.removeEventListener('touchstart', autoStart);
+    }
+    document.addEventListener('click', autoStart);
+    document.addEventListener('touchstart', autoStart, {passive:true});
+  });
+})();
+</script>
+
+
+<script>
+/* ══ MICRO-INTERACTIONS ══ */
+(function(){
+  const isTouch = () => window.matchMedia('(hover:none)').matches;
+
+  /* ── 1. Progress ring ── */
+  const ring = document.getElementById('progRing');
+  const CIRC = 100.53; // 2π × 16
+  function updateRing() {
+    const s = window.scrollY;
+    const t = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = t > 0 ? Math.min(s / t, 1) : 0;
+    ring.style.strokeDashoffset = CIRC * (1 - pct);
+  }
+  window.addEventListener('scroll', updateRing, {passive:true});
+
+  /* ── 2. Cursor glow ── */
+  const glow = document.getElementById('cursor-glow');
+  if (!isTouch() && glow) {
+    let gx = 0, gy = 0, tx = 0, ty = 0;
+    document.addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; }, {passive:true});
+    (function animGlow() {
+      gx += (tx - gx) * 0.12;
+      gy += (ty - gy) * 0.12;
+      glow.style.left = gx + 'px';
+      glow.style.top  = gy + 'px';
+      requestAnimationFrame(animGlow);
+    })();
+  }
+
+  /* ── 3. Magnetic buttons ── */
+  if (!isTouch()) {
+    document.querySelectorAll('.mag-btn').forEach(btn => {
+      btn.addEventListener('mousemove', e => {
+        const r = btn.getBoundingClientRect();
+        const dx = (e.clientX - r.left - r.width  / 2) * 0.28;
+        const dy = (e.clientY - r.top  - r.height / 2) * 0.28;
+        btn.style.transform = `translate(${dx}px, ${dy}px)`;
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = '';
+      });
+    });
+  }
+
+  /* ── 4. Soft ripple ── */
+  document.querySelectorAll('.ripple-host').forEach(el => {
+    el.addEventListener('click', function(e) {
+      const r = this.getBoundingClientRect();
+      const span = document.createElement('span');
+      const size = Math.max(r.width, r.height);
+      span.style.cssText = [
+        'position:absolute',
+        'border-radius:50%',
+        'pointer-events:none',
+        `width:${size * 0.15}px`,
+        `height:${size * 0.15}px`,
+        `left:${e.clientX - r.left - size * 0.075}px`,
+        `top:${e.clientY - r.top  - size * 0.075}px`,
+        'background:rgba(255,255,255,0.35)',
+        'animation:rippleOut .55s ease-out forwards'
+      ].join(';');
+      this.appendChild(span);
+      setTimeout(() => span.remove(), 580);
+    });
+  });
+
+  /* ── 5. Image tilt (desktop) ── */
+  const tiltEls = document.querySelectorAll('.tilt-img');
+  if (!isTouch()) {
+    tiltEls.forEach(el => {
+      el.addEventListener('mousemove', e => {
+        const r = el.getBoundingClientRect();
+        const x = (e.clientY - r.top  - r.height / 2) / (r.height / 2);
+        const y = (e.clientX - r.left - r.width  / 2) / (r.width  / 2);
+        el.style.transform = `perspective(800px) rotateX(${-x * 6}deg) rotateY(${y * 6}deg) scale(1.025)`;
+      });
+      el.addEventListener('mouseleave', () => {
+        el.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)';
+      });
+    });
+  }
+
+  /* ── 6. Page blur while navigating ── */
+  const blurOverlay = document.getElementById('nav-blur');
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', () => {
+      if (!blurOverlay) return;
+      blurOverlay.classList.add('active');
+      setTimeout(() => blurOverlay.classList.remove('active'), 520);
+    });
+  });
+
+  /* ── 7. Haptic feedback (mobile) ── */
+  function haptic(pattern) {
+    if (navigator.vibrate) navigator.vibrate(pattern);
+  }
+  document.querySelectorAll('.mag-btn, .ripple-host').forEach(btn => {
+    btn.addEventListener('touchstart', () => haptic(8), {passive:true});
+  });
+  // Stronger haptic on RSVP submit success
+  const rsvpForm = document.getElementById('rsvpForm');
+  if (rsvpForm) {
+    rsvpForm.addEventListener('submit', () => haptic([10, 40, 10]));
+  }
+
+  /* ── 8. Confetti only after RSVP ── */
+  function launchConfetti() {
+    const colors = ['#C7A85E','#E7D4A2','#F0E6C8','#9f2f2e','#ffffff','#C7A85E'];
+    const canvas = document.createElement('canvas');
+    canvas.style.cssText = 'position:fixed;inset:0;z-index:9000;pointer-events:none;';
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+    document.body.appendChild(canvas);
+    const ctx2 = canvas.getContext('2d');
+
+    const pieces = Array.from({length: 120}, () => ({
+      x: Math.random() * canvas.width,
+      y: -20 - Math.random() * 200,
+      r: 3 + Math.random() * 5,
+      d: 1.5 + Math.random() * 2.5,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      tilt: Math.random() * 360,
+      tiltSpeed: (Math.random() - .5) * 4,
+      drift: (Math.random() - .5) * 1.2,
+      shape: Math.random() > .5 ? 'circle' : 'rect'
+    }));
+
+    let frame = 0;
+    function draw() {
+      ctx2.clearRect(0, 0, canvas.width, canvas.height);
+      pieces.forEach(p => {
+        ctx2.save();
+        ctx2.translate(p.x, p.y);
+        ctx2.rotate(p.tilt * Math.PI / 180);
+        ctx2.fillStyle = p.color;
+        ctx2.globalAlpha = Math.max(0, 1 - frame / 180);
+        if (p.shape === 'circle') {
+          ctx2.beginPath(); ctx2.arc(0, 0, p.r, 0, Math.PI * 2); ctx2.fill();
+        } else {
+          ctx2.fillRect(-p.r, -p.r * .5, p.r * 2, p.r);
+        }
+        ctx2.restore();
+        p.y      += p.d;
+        p.x      += p.drift;
+        p.tilt   += p.tiltSpeed;
+        p.d      *= 1.008;
+      });
+      frame++;
+      if (frame < 200) requestAnimationFrame(draw);
+      else canvas.remove();
+    }
+    draw();
+  }
+
+  // Trigger confetti after successful RSVP
+  const formMsg = document.getElementById('formMsg');
+  if (formMsg) {
+    const observer = new MutationObserver(() => {
+      if (formMsg.textContent.includes('Thank you')) {
+        haptic([15, 30, 15, 30, 50]);
+        setTimeout(launchConfetti, 300);
+      }
+    });
+    observer.observe(formMsg, {childList: true, characterData: true, subtree: true});
+  }
+
+  /* ── Touch device detection ── */
+  if (isTouch()) document.body.classList.add('touch-device');
+})();
+</script>
+
+
+<script>
+/* ── BOTTOM DOCK ACTIVE STATE ── */
+(function(){
+  const dock = document.getElementById('bottom-dock');
+  if (!dock) return;
+  const items = Array.from(dock.querySelectorAll('.dock-item'));
+  const sections = items.map(a => document.getElementById(a.dataset.section)).filter(Boolean);
+
+  function updateActive() {
+    const y = window.scrollY + window.innerHeight * 0.35;
+    let active = sections[0];
+    sections.forEach(s => { if (s && s.offsetTop <= y) active = s; });
+    items.forEach(a => {
+      a.classList.toggle('active', a.dataset.section === (active && active.id));
+    });
+  }
+
+  window.addEventListener('scroll', updateActive, {passive:true});
+  updateActive();
+
+  // Haptic on dock tap
+  items.forEach(a => {
+    a.addEventListener('touchstart', () => { if(navigator.vibrate) navigator.vibrate(8); }, {passive:true});
+  });
+})();
+</script>
+
+
+<script>
+/* ── RSVP SEQUENTIAL FIELD REVEAL ── */
+(function(){
+  const form = document.getElementById('rsvpForm');
+  if (!form) return;
+  const fields = Array.from(form.querySelectorAll('.rsvp-field'));
+
+  // Reveal fields one by one when section enters view
+  const sec = document.getElementById('rsvp');
+  if (!sec) return;
+
+  let revealed = false;
+  const io = new IntersectionObserver(entries => {
+    if (revealed || !entries[0].isIntersecting) return;
+    revealed = true;
+    fields.forEach((f, i) => {
+      setTimeout(() => f.classList.add('visible'), i * 110);
+    });
+    io.disconnect();
+  }, { threshold: 0.15 });
+  io.observe(sec);
+
+  // Focus next field on Enter (keyboard flow)
+  fields.forEach((f, i) => {
+    const input = f.querySelector('input, select, textarea');
+    if (!input) return;
+    input.addEventListener('keydown', e => {
+      if (e.key !== 'Enter' || input.tagName === 'TEXTAREA') return;
+      e.preventDefault();
+      const next = fields[i + 1];
+      if (next) { next.querySelector('input, select, textarea')?.focus(); }
+      else { document.getElementById('submitBtn')?.focus(); }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
